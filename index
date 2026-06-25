@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growthmint Systems Pvt Ltd | Premium Automated Business Operating Engines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glassmorphism {
+            background: rgba(17, 24, 39, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .premium-gradient {
+            background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #7c3aed 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes lineLoop {
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
+        }
+        .animate-line-loop {
+            stroke-dasharray: 20;
+            animation: lineLoop 2s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300 flex flex-col min-h-screen">
+
+    <div class="bg-gradient-to-r from-brand-700 via-indigo-600 to-brand-800 px-6 py-2.5 text-center text-white text-xs font-semibold tracking-wide flex justify-center items-center space-x-3 shadow-sm border-b border-brand-600/50">
+        <i class="fas fa-rocket animate-bounce"></i>
+        <span>Enterprise-Grade Automated Operating Systems for Indian Enterprises at SME Pricing.</span>
+    </div>
+
+    <nav class="sticky top-0 z-50 glassmorphism px-6 py-4 flex justify-between items-center shadow-sm transition-all duration-300 border-b border-slate-200/20 dark:border-slate-800/20">
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="switchPage('home')">
+            <span class="text-2xl font-extrabold tracking-tight text-gradient">Growthmint</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+            <button onclick="switchPage('home')" class="nav-btn px-4 py-2 rounded-xl text-sm font-bold text-brand-600 bg-brand-50 dark:bg-slate-800 transition-all" id="nav-home">Home</button>
+            <button onclick="switchPage('services')" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-services">Why Us & Systems</button>
+            <button onclick="switchPage('plans')" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-plans">OS Plans</button>
+            <button onclick="switchPage('careers')" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-careers">Careers</button>
+            <button onclick="switchPage('contact')" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-contact">Contact Us</button>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button id="themeToggle" onclick="toggleTheme()" class="p-2.5 rounded-full bg-slate-200/60 dark:bg-slate-800 hover:scale-105 transition-all shadow-sm">
+                <i class="fas fa-moon text-slate-700 dark:text-slate-300 text-sm"></i>
+            </button>
+            <a href="https://wa.me/919876543210" target="_blank" class="hidden sm:flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-lg shadow-emerald-600/20 transition-all hover:-translate-y-0.5">
+                <i class="fab fa-whatsapp text-base"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+            <button onclick="switchPage('contact')" class="px-5 py-2.5 rounded-xl text-xs font-bold text-white premium-gradient shadow-lg shadow-brand-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-brand-600/40">Book System Audit</button>
+        </div>
+    </nav>
+
+    <main id="page-home" class="flex-grow max-w-7xl mx-auto px-6 py-16 md:py-24 space-y-24 animate-fade-in">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative">
+            <div class="absolute inset-0 -z-10 flex items-center justify-center">
+                <div class="w-[450px] h-[450px] bg-brand-500/10 rounded-full blur-[130px] dark:bg-brand-500/5"></div>
+            </div>
+            <div class="space-y-6">
+                <span class="px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300 border border-brand-100 dark:border-slate-700"><i class="fas fa-shield-alt mr-1.5"></i> Enterprise Platforms for SMEs</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                    Your Business. Fully Automated. <br/>
+                    <span class="text-gradient">24/7.</span>
+                </h1>
+                <p class="text-slate-600 dark:text-slate-400 text-base max-w-lg leading-relaxed">A complete system that captures leads, follows up, books customers, and tracks performance automatically — without manual effort. Stop relying on disconnected suites and transition to a unified operating engine.</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+                    <button onclick="switchPage('plans')" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white premium-gradient shadow-xl shadow-brand-700/25 hover:scale-[1.02] transition-all flex items-center justify-center space-x-2"><i class="fas fa-th-large"></i> <span>Explore OS Plans</span></button>
+                    <button onclick="openModal('Inquire about our OS')" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold border border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all flex items-center justify-center space-x-2"><i class="fas fa-power-off text-brand-500"></i> <span>Deploy 24/7 Engine</span></button>
+                </div>
+            </div>
+            <div class="glassmorphism rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-2xl relative">
+                <div class="absolute -top-6 -right-6 w-20 h-20 bg-brand-500/20 rounded-full blur-[20px]"></div>
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="w-12 h-12 rounded-2xl premium-gradient flex items-center justify-center text-white text-xl shadow-md"><i class="fas fa-server"></i></div>
+                    <div>
+                        <h4 class="font-bold text-base tracking-tight">System Performance Monitor</h4>
+                        <span class="text-xs text-slate-500">Running 24/7 Serverless Data Sync</span>
+                    </div>
+                </div>
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider mb-1.5">
+                            <span class="text-slate-500">System Availability</span>
+                            <span class="text-brand-600 dark:text-brand-400">24/7/365</span>
+                        </div>
+                        <div class="h-2.5 bg-slate-200 dark:border-slate-700 rounded-full overflow-hidden">
+                            <div class="h-full premium-gradient rounded-full w-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider mb-1.5">
+                            <span class="text-slate-500">Parallel Capacity Requests</span>
+                            <span class="text-brand-600 dark:text-brand-400">100 / Sec</span>
+                        </div>
+                        <div class="h-2.5 bg-slate-200 dark:border-slate-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-indigo-500 rounded-full w-[90%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider mb-1.5">
+                            <span class="text-slate-500">Database & Cloud Sync</span>
+                            <span class="text-emerald-600 dark:text-emerald-400">Instant</span>
+                        </div>
+                        <div class="h-2.5 bg-slate-200 dark:border-slate-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-emerald-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-200/60 dark:border-slate-700/60 grid grid-cols-2 gap-4 text-center">
+                    <div>
+                        <span class="block text-2xl font-black tracking-tight text-gradient">60-80%</span>
+                        <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Reduction in Missed Leads</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-black tracking-tight text-gradient">3-5x</span>
+                        <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Faster Response Times</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glassmorphism p-12 rounded-3xl border border-slate-200/60 dark:border-slate-700/60 shadow-xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-4">
+                <span class="text-xs font-black uppercase tracking-widest text-rose-600 dark:text-rose-400"><i class="fas fa-exclamation-triangle"></i> Operational Bottlenecks</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Are you losing customers to verbal chaos and manual delays?</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Traditional methods cause significant friction in SME operations:</p>
+                <ul class="space-y-3 text-xs font-semibold text-slate-600 dark:text-slate-400">
+                    <li><i class="fas fa-times-circle text-rose-500 mr-2"></i>High volume of leads getting missed or going cold</li>
+                    <li><i class="fas fa-times-circle text-rose-500 mr-2"></i>Slow, inconsistent manual follow-up sequences</li>
+                    <li><i class="fas fa-times-circle text-rose-500 mr-2"></i>Scattered Excel databases with zero pipeline visibility</li>
+                    <li><i class="fas fa-times-circle text-rose-500 mr-2"></i>Reliance on manual appointment booking and diaries</li>
+                    <li><i class="fas fa-times-circle text-rose-500 mr-2"></i>No real-time analytics, KPIs, or staff performance tracking</li>
+                </ul>
+            </div>
+            <div class="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white space-y-6 shadow-2xl border border-slate-700">
+                <div class="w-12 h-12 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl"><i class="fas fa-users-slash"></i></div>
+                <div class="space-y-2">
+                    <h3 class="font-black text-lg tracking-tight">Heavy Manual Admin Workload</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Stop wasting resources on manual tracking. Scaling operations shouldn't require expanding administrative headcount.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-700/60">
+                    <span class="block text-3xl font-extrabold tracking-tight text-white">50% Reduction</span>
+                    <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">In manual admin overhead</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-10">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-puzzle-piece"></i> Unified Architecture</span>
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight">Replace manual operations with a 24/7 automated engine.</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-xs">We do not sell isolated software tools or generic landing pages. We deploy industry-specific client operating system engines.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 space-y-4 hover:scale-[1.03] transition-all">
+                    <div class="w-10 h-10 rounded-xl premium-gradient text-white flex items-center justify-center"><i class="fas fa-laptop-code"></i></div>
+                    <h4 class="font-bold text-sm">Automated Lead Capture 24/7</h4>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Client inquiries bypass direct database writes, routing smoothly through custom website forms and landing pages.</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 space-y-4 hover:scale-[1.03] transition-all">
+                    <div class="w-10 h-10 rounded-xl premium-gradient text-white flex items-center justify-center"><i class="fas fa-tasks"></i></div>
+                    <h4 class="font-bold text-sm">CRM Pipeline Management</h4>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Leads are organized into clear conversion pipelines. Automated follow-ups run without requiring manual initiation.</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 space-y-4 hover:scale-[1.03] transition-all">
+                    <div class="w-10 h-10 rounded-xl premium-gradient text-white flex items-center justify-center"><i class="fas fa-chart-pie"></i></div>
+                    <h4 class="font-bold text-sm">Performance Analytics Control</h4>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Aggregated operational dashboards provide owners with real-time insights, lead conversions, and key performance metrics.</p>
+                </div>
+            </div>
+            
+            <div class="glassmorphism p-8 rounded-2xl border border-brand-200 dark:border-slate-700 premium-gradient text-white flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left shadow-xl">
+                <div class="space-y-1.5 max-w-xl">
+                    <h4 class="font-extrabold text-lg"><i class="fas fa-chart-line mr-1"></i> Achieve a 40–70% Increase in Lead Conversion Rates</h4>
+                    <p class="text-[10px] text-indigo-100 leading-relaxed">By eliminating verbal chaos and automating follow-ups, your business operating pipeline captures, processes, and converts inquiries without delays.</p>
+                </div>
+                <button onclick="switchPage('plans')" class="px-7 py-3.5 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 transition shadow-lg flex-shrink-0">Deploy Your Automated OS</button>
+            </div>
+        </section>
+
+        <section class="space-y-10">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400"><i class="fas fa-award"></i> Validated Enterprise Ecosystems</span>
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight">Trusted by Scaling Businesses</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glassmorphism p-8 rounded-2xl shadow-sm space-y-6 border border-slate-200/50 dark:border-slate-700/50">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center font-black text-indigo-600 text-lg">AS</div>
+                        <div>
+                            <h5 class="font-bold text-sm">Amit Sharma</h5>
+                            <span class="text-[10px] uppercase font-semibold text-slate-500">Director, Clinic Operations</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed italic">"Before deploying our dedicated OS, our reception desk was constantly missing patient appointments. Now, leads are captured instantly, booking confirmations are sent via WhatsApp, and our calendar updates automatically without manual entry."</p>
+                    <div class="flex space-x-1 text-amber-500 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="glassmorphism p-8 rounded-2xl shadow-sm space-y-6 border border-slate-200/50 dark:border-slate-700/50">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center font-black text-purple-600 text-lg">PK</div>
+                        <div>
+                            <h5 class="font-bold text-sm">Priya Kulkarni</h5>
+                            <span class="text-[10px] uppercase font-semibold text-slate-500">Founder, Realty Firm</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed italic">"Managing high-ticket real estate leads used to be chaotic. The automated CRM pipeline assigns inquiries instantly to our sales agents, and the mobile application allows them to update deal stages from anywhere. A massive efficiency multiplier."</p>
+                    <div class="flex space-x-1 text-amber-500 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="glassmorphism p-8 rounded-2xl shadow-sm space-y-6 border border-slate-200/50 dark:border-slate-700/50">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center font-black text-emerald-600 text-lg">RV</div>
+                        <div>
+                            <h5 class="font-bold text-sm">Rakesh Verma</h5>
+                            <span class="text-[10px] uppercase font-semibold text-slate-500">Consulting Partner</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed italic">"Our consulting firm runs 24/7 now. Consultation bookings trigger immediate document generation and payment links seamlessly. We've scaled our client capacity without adding operational headcount."</p>
+                    <div class="flex space-x-1 text-amber-500 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-services" class="flex-grow max-w-7xl mx-auto px-6 py-16 md:py-24 space-y-24 animate-fade-in hidden">
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-info-circle"></i> The Operations Engine</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Enterprise Architecture Built for Indian SMEs</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">We build unified systems that run reliably, eliminating the need to stitch together multiple bloated SaaS subscriptions.</p>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl premium-gradient flex items-center justify-center text-white font-bold flex-shrink-0 mt-1"><i class="fas fa-bolt"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-base">24/7 Automated Operations Engine</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Your front-end website securely routes all leads straight into your dedicated database. No third-party servers, no bloated forms—just instant capture.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl premium-gradient flex items-center justify-center text-white font-bold flex-shrink-0 mt-1"><i class="fas fa-bell"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-base">Real-Time Notifications & Control</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Instant alerts go directly to business owners and customers upon form submission. Custom pipeline stages, automated booking calendars, and data views keep operations moving smoothly.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl premium-gradient flex items-center justify-center text-white font-bold flex-shrink-0 mt-1"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-base">Multi-Device Operations</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Access your secure workspace across both web and mobile app interfaces. Role-based dashboards ensure team members only view authorized data and tasks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glassmorphism rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-6">
+                <h3 class="text-lg font-extrabold tracking-tight text-center"><i class="fas fa-chart-line mr-1"></i> Data Analytics & Performance</h3>
+                <div class="p-6 rounded-2xl bg-brand-50/50 dark:bg-slate-800/50 border border-brand-100 dark:border-slate-700 space-y-4 text-center">
+                    <i class="fas fa-chart-line text-4xl text-gradient animate-pulse"></i>
+                    <h4 class="font-bold text-sm">Executive Performance Control Center</h4>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">Review real-time KPI reports, track conversions, and monitor team activities directly from your centralized dashboard.</p>
+                    <button onclick="openModal('Request Platform Data Sync Setup')" class="w-full py-3 rounded-xl text-xs font-bold premium-gradient text-white shadow-lg shadow-brand-600/20">Configure Analytics OS</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-10 animate-fade-in">
+            <div class="text-center space-y-2">
+                <h3 class="text-2xl font-black tracking-tight"><i class="fas fa-th-list mr-1"></i> Core Operational Modules</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Pre-packaged operational systems tailored for specific industries.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3 hover:-translate-y-1 transition">
+                    <i class="fas fa-hospital text-2xl text-brand-600"></i>
+                    <h4 class="font-bold text-sm">ClinicOS™ - Healthcare Systems</h4>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">Manage high-volume clinic bookings, patient inquiries, and automated WhatsApp appointment reminders smoothly.</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3 hover:-translate-y-1 transition">
+                    <i class="fas fa-building text-2xl text-brand-600"></i>
+                    <h4 class="font-bold text-sm">RealtyOS™ - Real Estate Systems</h4>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">Prevent high-ticket leads from going cold. Auto-assign site visits and accelerate sales closures without friction.</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3 hover:-translate-y-1 transition">
+                    <i class="fas fa-graduation-cap text-2xl text-brand-600"></i>
+                    <h4 class="font-bold text-sm">EduOS™ - Educational Academies</h4>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">Streamline student admissions, course inquiries, consultation calendars, and batch scheduling operations.</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3 hover:-translate-y-1 transition">
+                    <i class="fas fa-cut text-2xl text-brand-600"></i>
+                    <h4 class="font-bold text-sm">SalonOS™ - Wellness Centers</h4>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">Automate scheduling calendars, recurring promotions, and appointment recovery sequences with low manual effort.</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3 hover:-translate-y-1 transition">
+                    <i class="fas fa-briefcase text-2xl text-brand-600"></i>
+                    <h4 class="font-bold text-sm">ServiceOS™ - Consulting Firms</h4>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">Consultancies, legal, and CA firms. Process client onboarding, document generation, and payment tracking automatically.</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3 hover:-translate-y-1 transition">
+                    <i class="fas fa-store text-2xl text-brand-600"></i>
+                    <h4 class="font-bold text-sm">Local SME Operations</h4>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">Standardized deployment configurations that capture local service inquiries and route communications instantly.</p>
+                </div>
+            </div>
+            
+            <div class="glassmorphism p-10 rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-xl text-center space-y-6 relative overflow-hidden">
+                <div class="absolute inset-0 -z-10 bg-white/40 dark:bg-slate-900/40"></div>
+                <h4 class="font-extrabold text-base tracking-tight"><i class="fas fa-project-diagram mr-1"></i> Automated Data Processing & Pipeline Architecture Map</h4>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Visualizing our standardized, high-performing processing pipeline. Lines and loops represent live data traveling continuously through each integrated stage.</p>
+                
+                <div class="relative py-8 w-full max-w-4xl mx-auto flex items-center justify-between px-4">
+                    <svg class="absolute inset-0 w-full h-full -z-10" viewBox="0 0 800 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 100 75 L 250 75" stroke="#a78bfa" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 250 75 L 400 75" stroke="#a78bfa" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 400 75 L 550 75" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 550 75 L 700 75" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="100" y1="75" x2="700" y2="75" stroke="#c084fc" stroke-width="4" stroke-dasharray="15 35" class="animate-line-loop" />
+                    </svg>
+                    
+                    <div class="flex flex-col items-center gap-2 p-4 w-28 bg-white/70 dark:bg-slate-800/80 rounded-2xl border border-violet-200 dark:border-violet-700 shadow-md backdrop-blur-xs">
+                        <i class="fas fa-globe text-violet-600 text-lg animate-pulse"></i>
+                        <span class="text-[8px] font-black tracking-wider uppercase text-center text-slate-700 dark:text-slate-200">Web Interface Input</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 p-4 w-28 bg-white/70 dark:bg-slate-800/80 rounded-2xl border border-violet-200 dark:border-violet-700 shadow-md backdrop-blur-xs">
+                        <i class="fas fa-database text-violet-700 text-lg"></i>
+                        <span class="text-[8px] font-black tracking-wider uppercase text-center text-slate-700 dark:text-slate-200">Master Database</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 p-4 w-28 bg-white/70 dark:bg-slate-800/80 rounded-2xl border border-indigo-200 dark:border-indigo-700 shadow-md backdrop-blur-xs">
+                        <i class="fas fa-cogs text-indigo-600 text-lg animate-spin" style="animation-duration: 4s;"></i>
+                        <span class="text-[8px] font-black tracking-wider uppercase text-center text-slate-700 dark:text-slate-200">Automation Engine</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 p-4 w-28 bg-white/70 dark:bg-slate-800/80 rounded-2xl border border-emerald-200 dark:border-emerald-700 shadow-md backdrop-blur-xs">
+                        <i class="fas fa-tasks text-emerald-600 text-lg"></i>
+                        <span class="text-[8px] font-black tracking-wider uppercase text-center text-slate-700 dark:text-slate-200">CRM Dashboard</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 p-4 w-28 bg-white/70 dark:bg-slate-800/80 rounded-2xl border border-emerald-200 dark:border-emerald-700 shadow-md backdrop-blur-xs">
+                        <i class="fas fa-tablet-alt text-emerald-700 text-lg animate-bounce"></i>
+                        <span class="text-[8px] font-black tracking-wider uppercase text-center text-slate-700 dark:text-slate-200">Web/Mobile ERP</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glassmorphism p-10 max-w-3xl mx-auto rounded-3xl border border-slate-200/60 dark:border-slate-700/60 shadow-xl space-y-8 animate-fade-in">
+                <div class="text-center space-y-1.5">
+                    <h3 class="text-2xl font-extrabold tracking-tight"><i class="fas fa-bug mr-1"></i> System Feedback & Maintenance Reporting</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Submit operational feedback or report platform issues directly to our systems engineers.</p>
+                </div>
+                <form id="form-feedback" onsubmit="handleFormSubmit(event, 'System report successfully submitted')" class="space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Registered Corporate Email</label>
+                            <input type="email" placeholder="admin@firm.in" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">System Module Reference</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                                <option value="">Select operating system module</option>
+                                <option value="Lead Engine">Lead Capture & CRM Pipeline</option>
+                                <option value="Calendar Sync">Direct Google Calendar Booking Sync</option>
+                                <option value="Mobile App">AppSheet Operations Layer</option>
+                                <option value="Analytics">Looker Studio Analytics Control Center</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Detailed Description of Feedback / Issue</label>
+                        <textarea rows="4" placeholder="Describe the operational details..." class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold bg-slate-900 dark:bg-white dark:text-slate-900 hover:bg-slate-800 transition-all shadow-xl">Submit Feedback Payload</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-plans" class="flex-grow max-w-7xl mx-auto px-6 py-16 md:py-24 space-y-16 animate-fade-in hidden">
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-tags"></i> Standardized Pricing Ecosystem</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Unified Operating System Plans</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">Cost-efficient, zero-maintenance architectures designed to replace bloated monthly SaaS subscriptions.</p>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glassmorphism p-8 rounded-2xl shadow-lg border border-slate-200/40 dark:border-slate-700/40 hover:-translate-y-1.5 transition-all duration-300 space-y-6 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300"><i class="fas fa-bolt"></i> Entry Package</span>
+                    <h3 class="text-2xl font-black tracking-tight">Core OS</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Perfect for capturing initial leads securely. Eliminates fragmented, expensive landing page suites.</p>
+                    <div class="flex items-baseline space-x-1">
+                        <span class="text-4xl font-extrabold tracking-tight">₹4,999</span>
+                        <span class="text-xs font-semibold text-slate-400">/ mo</span>
+                        <span class="text-[9px] font-bold text-slate-500 ml-2">+ ₹12k setup</span>
+                    </div>
+                    <p class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider border-y py-2 border-indigo-100 dark:border-indigo-900/40"><i class="fas fa-crosshairs mr-1"></i> Goal: capture every enquiry, no missed leads</p>
+                    <ul class="text-xs space-y-3 text-slate-600 dark:text-slate-400">
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>A simple 1–3 page website</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>WhatsApp + contact form</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Central Database Ingestion</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Basic dashboard (leads count)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Email alert on new lead</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Monthly support</li>
+                    </ul>
+                </div>
+                <button onclick="openModalDetails('Core OS', '₹4,999/mo (+ ₹12k setup)', 'A simple 1–3 page conversion website with WhatsApp + contact form, central database ingestion, basic dashboard (leads count), email alert on new lead, and monthly support. Goal: capture every enquiry, no missed leads.')" class="w-full py-3.5 rounded-xl text-xs font-bold premium-gradient text-white shadow-md shadow-brand-600/20">View Details & Select</button>
+            </div>
+            
+            <div class="glassmorphism p-8 rounded-2xl shadow-xl border-2 border-brand-500 dark:border-brand-400 relative hover:-translate-y-1.5 transition-all duration-300 space-y-6 flex flex-col justify-between">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-0.5 rounded-full text-[9px] font-black tracking-widest uppercase premium-gradient text-white shadow-sm"><i class="fas fa-certificate"></i> Recommended System</div>
+                <div class="space-y-4 mt-2">
+                    <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-indigo-50 text-indigo-700 dark:bg-slate-800 dark:text-indigo-300"><i class="fas fa-chart-line"></i> Growth Package</span>
+                    <h3 class="text-2xl font-black tracking-tight">Growth OS</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Full CRM pipeline automations with direct calendar bookings. Designed for deal closures.</p>
+                    <div class="flex items-baseline space-x-1">
+                        <span class="text-4xl font-extrabold tracking-tight">₹12,999</span>
+                        <span class="text-xs font-semibold text-slate-400">/ mo</span>
+                        <span class="text-[9px] font-bold text-slate-500 ml-2">+ ₹30k setup</span>
+                    </div>
+                    <p class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider border-y py-2 border-indigo-100 dark:border-indigo-900/40"><i class="fas fa-arrow-circle-right mr-1"></i> Includes everything from Core OS +</p>
+                    <ul class="text-xs space-y-3 text-slate-600 dark:text-slate-400">
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Premium website (5 sections + popups)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Alerts to client & customers</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Basic CRM pipeline (New/Contacted/Booked/Closed)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Editable lead dashboard</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Appointment booking + calendar sync</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Follow-up automation (7–14 days)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Bi-weekly + monthly reports</li>
+                    </ul>
+                </div>
+                <button onclick="openModalDetails('Growth OS', '₹12,999/mo (+ ₹30k setup)', 'Includes everything from Core OS plus premium website (5 sections + popups), alerts to client & customers, basic CRM pipeline (New/Contacted/Booked/Closed), editable lead dashboard, appointment booking + calendar sync, follow-up automation (7–14 days), and bi-weekly/monthly reports.')" class="w-full py-3.5 rounded-xl text-xs font-bold premium-gradient text-white shadow-lg shadow-brand-600/30">View Details & Select</button>
+            </div>
+            
+            <div class="glassmorphism p-8 rounded-2xl shadow-lg border border-slate-200/40 dark:border-slate-700/40 hover:-translate-y-1.5 transition-all duration-300 space-y-6 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300"><i class="fas fa-crown"></i> Elite Package</span>
+                    <h3 class="text-2xl font-black tracking-tight">Elite OS</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Full mobile operational layer with user role-based dashboards. Scaled enterprise suite.</p>
+                    <div class="flex items-baseline space-x-1">
+                        <span class="text-4xl font-extrabold tracking-tight">₹36,999</span>
+                        <span class="text-xs font-semibold text-slate-400">/ mo</span>
+                        <span class="text-[9px] font-bold text-slate-500 ml-2">+ ₹1L setup</span>
+                    </div>
+                    <p class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider border-y py-2 border-indigo-100 dark:border-indigo-900/40"><i class="fas fa-arrow-circle-right mr-1"></i> Includes everything from Growth OS +</p>
+                    <ul class="text-xs space-y-3 text-slate-600 dark:text-slate-400">
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Premium website (5–8 sections + popups)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Full ERP CRM (Hot/Warm/Cold/Lost) (multi-user system)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Role-based access (Admin/Staff)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Advanced dashboard (revenue + KPI + staff)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Mobile CRM (App-like app control)</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>WhatsApp API + full automation engine</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>AI chatbot, weekly + monthly reports</li>
+                    </ul>
+                </div>
+                <button onclick="openModalDetails('Elite OS', '₹36,999/mo (+ ₹1L setup)', 'The complete enterprise suite. Includes everything from Growth OS plus premium website (5–8 sections + popups), full ERP CRM (Hot/Warm/Cold/Lost, multi-user system), role-based access (Admin/Staff), advanced dashboard (revenue + KPI + staff), mobile CRM, WhatsApp API + full automation engine, AI chatbot, and reporting suites.')" class="w-full py-3.5 rounded-xl text-xs font-bold premium-gradient text-white shadow-md shadow-brand-600/20">View Details & Select</button>
+            </div>
+        </section>
+        
+        <section class="glassmorphism p-10 rounded-3xl border border-slate-200/60 dark:border-slate-700/60 shadow-xl space-y-8 animate-fade-in">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h3 class="text-2xl font-black tracking-tight">Maximize Efficiency with Less Manpower</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Scale your enterprise without linear hiring. Our operating engines are built to multiply efficiency.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 py-4 text-center text-xs font-black tracking-widest uppercase">
+                <div class="p-5 bg-emerald-50 dark:bg-slate-800 border border-emerald-100 dark:border-slate-700 rounded-2xl text-emerald-600 dark:text-emerald-400 space-y-2 flex flex-col items-center">
+                    <i class="fas fa-globe text-base animate-pulse"></i>
+                    <span>Starter OS <br><b>Leads</b></span>
+                </div>
+                <i class="fas fa-angle-right text-slate-400 text-lg hidden md:block"></i>
+                <div class="p-5 bg-indigo-50 dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-2xl text-indigo-600 dark:text-indigo-400 space-y-2 flex flex-col items-center">
+                    <i class="fas fa-funnel-dollar text-base"></i>
+                    <span>Growth OS <br><b>Sales</b></span>
+                </div>
+                <i class="fas fa-angle-right text-slate-400 text-lg hidden md:block"></i>
+                <div class="p-5 bg-violet-50 dark:bg-slate-800 border border-violet-100 dark:border-slate-700 rounded-2xl text-violet-600 dark:text-violet-400 space-y-2 flex flex-col items-center">
+                    <i class="fas fa-server text-base animate-bounce"></i>
+                    <span>Elite OS <br><b>Full Automation ERP</b></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-t border-slate-200/50 dark:border-slate-700/50 pt-8">
+                <div class="space-y-4 text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                    <p><i class="fas fa-shield-check text-emerald-500 mr-2"></i><strong>Operates 24/7/365:</strong> Inquiries are captured and processed continuously, even when your office is closed.</p>
+                    <p><i class="fas fa-shield-check text-emerald-500 mr-2"></i><strong>High-Volume Parallel Processing:</strong> Capable of managing up to 100 parallel requests simultaneously without delay or bottlenecking.</p>
+                    <p><i class="fas fa-shield-check text-emerald-500 mr-2"></i><strong>Direct Calendar Sync:</strong> Bookings flow instantly into your calendars, avoiding scheduling conflicts and double bookings.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-700 text-white space-y-4 text-center shadow-lg">
+                    <i class="fas fa-chart-line text-4xl animate-bounce"></i>
+                    <h4 class="font-bold text-sm">Save Up to 70% in Manpower Costs</h4>
+                    <p class="text-[10px] text-indigo-100 leading-relaxed">Automate repetitive client tasks, follow-ups, and notifications to let a smaller team focus on strategic growth.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-careers" class="flex-grow max-w-7xl mx-auto px-6 py-16 md:py-24 space-y-20 animate-fade-in hidden">
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="text-xs font-extrabold uppercase the-widest text-brand-600"><i class="fas fa-briefcase"></i> Join our engineering deployment factory</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Careers & Internships</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">We hire learners, builders, and problem solvers — not just employees. Join our ecosystem deployment teams.</p>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glassmorphism p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-5">
+                <span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
+                <h3 class="text-xl font-black tracking-tight">Full Stack Software Engineer</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Design serverless backends, operational routines, and modern UI/UX frontends for client system deployments.</p>
+                <div class="flex flex-wrap gap-3 text-[10px] font-bold text-slate-500">
+                    <span><i class="fas fa-briefcase mr-1.5 text-brand-500"></i>Full Time</span>
+                    <span><i class="fas fa-wallet mr-1.5 text-brand-500"></i>Competitive Remuneration</span>
+                    <span><i class="fas fa-map-marker-alt mr-1.5 text-brand-500"></i>New Delhi / Remote</span>
+                </div>
+                <button onclick="openCareersModal('Full Stack Software Engineer')" class="w-full py-3 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Submit Application</button>
+            </div>
+            <div class="glassmorphism p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-5">
+                <span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
+                <h3 class="text-xl font-black tracking-tight">Data Analytics & Reporting Engineer</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Connect Central Database schemas to reporting control panels. Build live performance monitoring reports.</p>
+                <div class="flex flex-wrap gap-3 text-[10px] font-bold text-slate-500">
+                    <span><i class="fas fa-briefcase mr-1.5 text-brand-500"></i>Full Time</span>
+                    <span><i class="fas fa-wallet mr-1.5 text-brand-500"></i>Competitive Remuneration</span>
+                    <span><i class="fas fa-map-marker-alt mr-1.5 text-brand-500"></i>New Delhi / Remote</span>
+                </div>
+                <button onclick="openCareersModal('Data Analytics & Reporting Engineer')" class="w-full py-3 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Submit Application</button>
+            </div>
+            <div class="glassmorphism p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-5">
+                <span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
+                <h3 class="text-xl font-black tracking-tight">B2B Sales & Business Development Manager</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Identify scaling SMEs, run preliminary system audits, and consult business owners on automation architectures.</p>
+                <div class="flex flex-wrap gap-3 text-[10px] font-bold text-slate-500">
+                    <span><i class="fas fa-briefcase mr-1.5 text-brand-500"></i>Full Time</span>
+                    <span><i class="fas fa-wallet mr-1.5 text-brand-500"></i>Base + High Incentives</span>
+                    <span><i class="fas fa-map-marker-alt mr-1.5 text-brand-500"></i>New Delhi</span>
+                </div>
+                <button onclick="openCareersModal('B2B Sales & Business Development Manager')" class="w-full py-3 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Submit Application</button>
+            </div>
+            <div class="glassmorphism p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-5">
+                <span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
+                <h3 class="text-xl font-black tracking-tight">Client Success & Service Operations Engineer</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Provide weekly performance tracking, verify automated workflows, and manage client deployments successfully.</p>
+                <div class="flex flex-wrap gap-3 text-[10px] font-bold text-slate-500">
+                    <span><i class="fas fa-briefcase mr-1.5 text-brand-500"></i>Full Time</span>
+                    <span><i class="fas fa-wallet mr-1.5 text-brand-500"></i>Competitive Remuneration</span>
+                    <span><i class="fas fa-map-marker-alt mr-1.5 text-brand-500"></i>New Delhi</span>
+                </div>
+                <button onclick="openCareersModal('Client Success & Service Operations Engineer')" class="w-full py-3 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Submit Application</button>
+            </div>
+        </section>
+
+        <section class="glassmorphism p-10 rounded-3xl border border-slate-200/60 dark:border-slate-700/60 shadow-xl space-y-8 animate-fade-in">
+            <div class="text-center space-y-2">
+                <h3 class="text-2xl font-black tracking-tight text-gradient"><i class="fas fa-graduation-cap mr-1"></i> Student & Fresher Internship Programs</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Gain hands-on experience in automated systems deployment. Full-time internships are paid; part-time opportunities are unpaid learning programs.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center py-4 border-y border-slate-200/40 dark:border-slate-700/40 text-[10px] font-bold text-slate-600 dark:text-slate-300">
+                <div class="space-y-2"><i class="fas fa-laptop text-brand-500 text-base"></i><span>SaaS System Exposure</span></div>
+                <div class="space-y-2"><i class="fas fa-cogs text-brand-500 text-base"></i><span>Automation Training</span></div>
+                <div class="space-y-2"><i class="fas fa-building text-brand-500 text-base"></i><span>Startup Experience</span></div>
+                <div class="space-y-2"><i class="fas fa-chart-line text-brand-500 text-base"></i><span>Growth Openings</span></div>
+                <div class="space-y-2"><i class="fas fa-medal text-brand-500 text-base"></i><span>Performance Rewards</span></div>
+            </div>
+
+            <form id="form-internship" onsubmit="handleFormSubmit(event, 'Internship application successfully submitted. We will be in touch shortly.')" class="space-y-5 pt-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Full Name</label>
+                        <input type="text" placeholder="Rahul Sharma" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Email Address</label>
+                        <input type="email" placeholder="rahul@student.edu" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Target Internship Division</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                            <option value="">Select department</option>
+                            <option value="HR">Human Resources (HR)</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Sales & BDM">Sales & Business Development</option>
+                            <option value="Website/Software">Website & Software Engineering</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="Service/Support">Customer Service & Support</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Availability Preference</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                            <option value="">Select internship type</option>
+                            <option value="Paid Full-Time">Paid Full-Time Internship (Paid)</option>
+                            <option value="Unpaid Part-Time">Unpaid Part-Time Internship (Learning Focus)</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Academic Background / Link to Portfolio URL</label>
+                    <input type="text" placeholder="Paste link to portfolio website, GitHub, or academic project URL" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Upload Resume / Supporting Documents (PDF/Docx)</label>
+                    <input type="file" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-[10px] file:font-black file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 transition-all" required>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl">Submit Internship Application</button>
+            </form>
+        </section>
+    </main>
+
+    <main id="page-contact" class="flex-grow max-w-6xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center animate-fade-in hidden">
+        <div class="space-y-8">
+            <div class="space-y-2">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-headphones"></i> Secure Direct System Connection</span>
+                <h2 class="text-4xl font-extrabold tracking-tight">Let's Deploy Your Automated OS</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Reach out directly or schedule a system audit. We are ready to transition your firm to unified cloud architectures.</p>
+            </div>
+            <div class="space-y-5">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-brand-600"><i class="fas fa-phone-alt"></i></div>
+                    <div>
+                        <span class="block text-[10px] uppercase font-bold text-slate-400">Direct Phone Line</span>
+                        <a href="tel:+919876543210" class="text-sm font-black hover:text-brand-500 transition">+91 98765 43210</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-brand-600"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <span class="block text-[10px] uppercase font-bold text-slate-400">Corporate Email</span>
+                        <a href="mailto:contact@growthmint.in" class="text-sm font-black hover:text-brand-500 transition">contact@growthmint.in</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-emerald-600"><i class="fab fa-whatsapp"></i></div>
+                    <div>
+                        <span class="block text-[10px] uppercase font-bold text-slate-400">WhatsApp Support</span>
+                        <a href="https://wa.me/919876543210" target="_blank" class="text-sm font-black hover:emerald-500 transition">Message Operations Desk</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-4 border-t border-slate-200/60 dark:border-slate-700/60">
+                <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Corporate Headquarters</span>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-semibold">
+                    Growthmint Systems Pvt Ltd<br>
+                    New Delhi, India<br>
+                    Data Compliant Enterprise Architecture
+                </p>
+            </div>
+        </div>
+
+        <div class="space-y-8 animate-fade-in">
+            <div class="glassmorphism p-8 rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-2xl space-y-6">
+                <div class="text-center space-y-1.5">
+                    <h3 class="text-xl font-black tracking-tight"><i class="fas fa-calendar-check mr-1"></i> Book a System Demo / Assessment</h3>
+                    <p class="text-[10px] text-slate-500 dark:text-slate-400">Request a consultation to audit your current business operating pipeline.</p>
+                </div>
+                <form id="form-contact" onsubmit="handleFormSubmit(event, 'Audit request submitted successfully. Our engineers will reach out via phone or WhatsApp shortly.')" class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider mb-1.5">Full Name</label>
+                        <input type="text" placeholder="Sanjay Gupta" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider mb-1.5">Work Email</label>
+                            <input type="email" placeholder="sanjay@firm.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider mb-1.5">WhatsApp Contact Number</label>
+                            <input type="tel" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider mb-1.5">Primary Operational Pain Point</label>
+                        <textarea rows="3" placeholder="e.g., Leads going cold, reception booking chaos, no automated staff or KPI tracking..." class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl shadow-brand-600/20">Submit System Audit Request</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="infoModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-md w-full glassmorphism p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl relative animate-fade-in space-y-5">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"><i class="fas fa-times"></i></button>
+            <div class="w-12 h-12 rounded-2xl premium-gradient flex items-center justify-center text-white text-xl shadow-md"><i class="fas fa-bullseye"></i></div>
+            <h3 class="text-lg font-black tracking-tight" id="modalTitle">System Feature Display Mode</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" id="modalDesc">Growthmint systems operate constantly. Our backend architecture processes parallel bookings, syncs directly with calendars, and provides reporting dashboards securely.</p>
+            <div class="border-t pt-4 border-slate-200/60 dark:border-slate-700/60 space-y-3">
+                <span class="block text-[9px] font-extrabold uppercase tracking-widest text-slate-400">Fill Interest Payload</span>
+                <form onsubmit="handleModalForm(event)" class="space-y-3">
+                    <div>
+                        <input type="text" id="modalName" placeholder="Full Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                    </div>
+                    <div>
+                        <input type="tel" id="modalPhone" placeholder="WhatsApp Contact Number" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-xl text-white text-xs font-bold premium-gradient shadow-lg">Submit Interest Payload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="planModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-md w-full glassmorphism p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl relative animate-fade-in space-y-5">
+            <button onclick="closeModalDetails()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"><i class="fas fa-times"></i></button>
+            <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300">Operating System Plan</span>
+                <span class="text-base font-extrabold" id="modalPlanPrice">₹0/mo</span>
+            </div>
+            <h3 class="text-xl font-black tracking-tight" id="modalPlanTitle">OS Configuration</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" id="modalPlanDesc">Detailed system documentation configuration overview.</p>
+            <div class="border-t pt-4 border-slate-200/60 dark:border-slate-700/60 space-y-3">
+                <span class="block text-[9px] font-extrabold uppercase tracking-widest text-slate-400">Submit System Subscription Interest</span>
+                <form onsubmit="handlePlanForm(event)" class="space-y-3">
+                    <div>
+                        <input type="text" id="planName" placeholder="Full Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                    </div>
+                    <div>
+                        <input type="email" id="planEmail" placeholder="Work Email" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                    </div>
+                    <div>
+                        <input type="tel" id="planPhone" placeholder="WhatsApp Number" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-xl text-white text-xs font-bold premium-gradient shadow-lg">Confirm Plan Subscription Interest</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="careerModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-md w-full glassmorphism p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl relative animate-fade-in space-y-5">
+            <button onclick="closeCareersModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"><i class="fas fa-times"></i></button>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-slate-800 flex items-center justify-center text-emerald-600"><i class="fas fa-user-tie"></i></div>
+            <h3 class="text-lg font-black tracking-tight" id="careerModalTitle">Job Role Assignment</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Fill out your information below to submit your application for this position.</p>
+            <form onsubmit="handleCareerForm(event)" class="space-y-4 pt-2">
+                <div>
+                    <input type="text" id="cName" placeholder="Full Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                </div>
+                <div>
+                    <input type="email" id="cEmail" placeholder="Email Address" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                </div>
+                <div>
+                    <input type="tel" id="cPhone" placeholder="WhatsApp Number" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+                </div>
+                <div>
+                    <label class="block text-[9px] font-bold uppercase tracking-wider mb-1 text-slate-500">Upload Resume (PDF/Docx)</label>
+                    <input type="file" class="w-full px-3 py-2 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs file:mr-4 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-[9px] file:font-black file:bg-violet-50 file:text-violet-700" required>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl">Submit Role Application Payload</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="glassmorphism border-t border-slate-200/60 dark:border-slate-700/60 py-12 px-6 mt-auto">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+            <div class="space-y-3">
+                <span class="font-black text-xs tracking-wider uppercase text-gradient"><i class="fas fa-cubes mr-1"></i> Growthmint Systems</span>
+                <p class="text-[10px] leading-relaxed text-slate-600 dark:text-slate-400 font-medium">Providing standardized, automated business operating engines to scale modern enterprises without increasing administrative headcount.</p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fab fa-twitter text-sm"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fab fa-linkedin text-sm"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fab fa-instagram text-sm"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-[10px] uppercase tracking-wider text-slate-400 mb-3">Operating Systems</h4>
+                <ul class="space-y-2 text-[11px] text-slate-600 dark:text-slate-400 font-semibold">
+                    <li><button onclick="openModal('ClinicOS Inquiry')" class="hover:text-brand-500 transition">ClinicOS™</button></li>
+                    <li><button onclick="openModal('RealtyOS Inquiry')" class="hover:text-brand-500 transition">RealtyOS™</button></li>
+                    <li><button onclick="openModal('ServiceOS Inquiry')" class="hover:text-brand-500 transition">ServiceOS™</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-[10px] uppercase tracking-wider text-slate-400 mb-3">Company Compliance</h4>
+                <ul class="space-y-2 text-[11px] text-slate-600 dark:text-slate-400 font-semibold">
+                    <li><button onclick="openPolicyModal('privacy')" class="hover:text-brand-500 transition">Privacy Policy</button></li>
+                    <li><button onclick="openPolicyModal('terms')" class="hover:text-brand-500 transition">Terms of Service</button></li>
+                    <li><button onclick="openPolicyModal('cookies')" class="hover:text-brand-500 transition">Cookies Policy</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-[10px] uppercase tracking-wider text-slate-400 mb-3">Corporate Headquarters</h4>
+                <p class="text-[10px] leading-relaxed text-slate-600 dark:text-slate-400 font-semibold">
+                    <strong>Growthmint Systems Pvt Ltd</strong><br>
+                    New Delhi, India<br>
+                    Incorporated under Indian Companies Act<br>
+                    Data Compliant Enterprise Architecture
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-200/40 dark:border-slate-700/40 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-bold uppercase tracking-wider text-slate-500 text-center md:text-left">
+            <span>&copy; 2026 Growthmint Systems Pvt Ltd. All Rights Reserved.</span>
+            <span>Regulated under Indian Companies Act Policies & Information Technology Rules.</span>
+        </div>
+    </footer>
+
+    <div id="policyModal" class="hidden fixed inset-0 z-[110] flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-2xl w-full glassmorphism p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl relative animate-fade-in space-y-4 max-h-[80vh] overflow-y-auto">
+            <button onclick="closePolicyModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
+            <h3 class="text-xl font-black tracking-tight" id="policyTitle">Policy Window</h3>
+            <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed space-y-4" id="policyContent">
+                </div>
+        </div>
+    </div>
+
+    <div id="cookieBanner" class="fixed bottom-6 right-6 left-6 md:left-auto md:w-[420px] z-[90] glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 shadow-2xl animate-fade-in space-y-4">
+        <p class="text-[10px] text-slate-600 dark:text-slate-400 leading-relaxed font-medium">We utilize basic local cookies to provide secure analytical tracking, optimize system performance, and maintain authenticated user portal access sessions. By continuing to use our systems, you accept our cookie usage policies.</p>
+        <div class="flex space-x-3">
+            <button onclick="acceptCookies()" class="w-full py-2.5 rounded-xl premium-gradient text-white text-[10px] font-bold shadow-md">Accept & Continue</button>
+            <button onclick="rejectCookies()" class="w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-[10px] font-bold hover:bg-slate-50 dark:hover:bg-slate-800">Decline/Reject</button>
+        </div>
+    </div>
+
+    <script>
+        // Premium Interface Page Switching Animation Engine
+        function switchPage(pageId) {
+            const pages = ['home', 'services', 'plans', 'careers', 'contact'];
+            pages.forEach(p => {
+                const el = document.getElementById('page-' + p);
+                const btn = document.getElementById('nav-' + p);
+                if (p === pageId) {
+                    el.classList.remove('hidden');
+                    if (btn) {
+                        btn.className = "nav-btn px-4 py-2 rounded-xl text-sm font-bold text-brand-600 bg-brand-50 dark:bg-slate-800 transition-all";
+                    }
+                } else {
+                    el.classList.add('hidden');
+                    if (btn) {
+                        btn.className = "nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all";
+                    }
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Dark/Light Mode Color Switching
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                document.querySelector('#themeToggle i').className = "fas fa-moon text-slate-700 text-sm";
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                document.querySelector('#themeToggle i').className = "fas fa-sun text-slate-300 text-sm";
+            }
+        }
+
+        // Apply System Theme Setting
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.querySelector('#themeToggle i').className = "fas fa-sun text-slate-300 text-sm";
+        }
+
+        // Premium Inquire Display Modal Engine
+        function openModal(title) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('infoModal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('infoModal').classList.add('hidden');
+        }
+
+        // Form Submit Popup Handler Payloads
+        function handleFormSubmit(e, successMsg) {
+            e.preventDefault();
+            alert(successMsg);
+            e.target.reset();
+        }
+
+        function handleModalForm(e) {
+            e.preventDefault();
+            alert('Payload interest logged successfully. System team calling line in progress.');
+            document.getElementById('modalName').value = '';
+            document.getElementById('modalPhone').value = '';
+            closeModal();
+        }
+
+        // Plan Selection System Modal
+        let selectedPlan = '';
+        function openModalDetails(planName, planPrice, planDesc) {
+            selectedPlan = planName;
+            document.getElementById('modalPlanTitle').innerText = planName;
+            document.getElementById('modalPlanPrice').innerText = planPrice;
+            document.getElementById('modalPlanDesc').innerText = planDesc;
+            document.getElementById('planModal').classList.remove('hidden');
+        }
+        function closeModalDetails() {
+            document.getElementById('planModal').classList.add('hidden');
+        }
+        function handlePlanForm(e) {
+            e.preventDefault();
+            alert('Subscription Interest payload sent for ' + selectedPlan + '. Verification email sent to business owner.');
+            e.target.reset();
+            closeModalDetails();
+        }
+
+        // Career Assignment Modal Engine
+        let targetRole = '';
+        function openCareersModal(role) {
+            targetRole = role;
+            document.getElementById('careerModalTitle').innerText = 'Applying for: ' + role;
+            document.getElementById('careerModal').classList.remove('hidden');
+        }
+        function closeCareersModal() {
+            document.getElementById('careerModal').classList.add('hidden');
+        }
+        function handleCareerForm(e) {
+            e.preventDefault();
+            alert('Application submitted successfully for ' + targetRole + '. HR operations review in progress.');
+            e.target.reset();
+            closeCareersModal();
+        }
+
+        // GDPR Cookie Banner Handling
+        function acceptCookies() {
+            document.getElementById('cookieBanner').classList.add('hidden');
+            localStorage.setItem('cookieAccepted', 'true');
+        }
+        function rejectCookies() {
+            document.getElementById('cookieBanner').classList.add('hidden');
+            localStorage.setItem('cookieAccepted', 'false');
+        }
+        if (localStorage.getItem('cookieAccepted')) {
+            document.getElementById('cookieBanner').classList.add('hidden');
+        }
+
+        // Policy Modals (Compliances Info Display)
+        function openPolicyModal(type) {
+            const title = document.getElementById('policyTitle');
+            const content = document.getElementById('policyContent');
+            if (type === 'privacy') {
+                title.innerText = 'Privacy Policy | Growthmint Systems';
+                content.innerHTML = `<p>Growthmint Systems Pvt Ltd ("We", "Us", "Our") respects and protects corporate partner data privacy. We collect names, work emails, and WhatsApp business telephone lines strictly for setting up digital system databases, operating analytics, and automating sales follow-ups.</p><p>Data is stored inside secured cloud environments. We do not sell or share business contact details with external marketing agencies.</p>`;
+            } else if (type === 'terms') {
+                title.innerText = 'Terms of Service | Growthmint Systems';
+                content.innerHTML = `<p>By using our automated operating engines (ClinicOS, RealtyOS, ServiceOS, etc.), customers ("You") agree to our serverless deployment frameworks. All upfront Scaffolding, Setup, and Scoping configuration fees are strictly 100% Non-Refundable.</p><p>Monthly services are prepaid. Systems will automatically lock if payment remains unsettled past standard billing dunning limits.</p>`;
+            } else if (type === 'cookies') {
+                title.innerText = 'Cookies Policy | Growthmint Systems';
+                content.innerHTML = `<p>Our single-page web UIs use small data files (Cookies) to maintain authenticated session entries, remember UI dark/light themes, and track frontend conversions.</p><p>These do not track personal activities outside our enterprise systems.</p>`;
+            }
+            document.getElementById('policyModal').classList.remove('hidden');
+        }
+        function closePolicyModal() {
+            document.getElementById('policyModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
