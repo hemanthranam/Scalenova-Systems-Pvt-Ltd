@@ -69,9 +69,9 @@ tailwind.config = {
 <span>Enterprise-Grade Automated Operating Systems for Indian MSMEs. Streamline Operations & Visibility.</span>
 </div>
 
-<nav class="sticky top-0 z-50 glassmorphism px-4 md:px-6 py-4 flex justify-between items-center shadow-sm transition-all duration-300 border-b border-slate-200/20 dark:border-slate-800/20 w-full">
+<nav class="sticky top-0 z-50 glassmorphism px-4 md:px-6 py-3 flex justify-between items-center shadow-sm transition-all duration-300 border-b border-slate-200/20 dark:border-slate-800/20 w-full">
 <div class="flex items-center space-x-3 cursor-pointer" onclick="switchPage('home')">
-<svg class="h-10 w-10 hidden md:block" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="h-8 w-8 hidden md:block" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
 <stop offset="0%" stop-color="#7F00FF" />
@@ -84,23 +84,23 @@ tailwind.config = {
 <circle cx="150" cy="50" r="16" fill="#4682B4"/>
 </svg>
 <div class="flex flex-col justify-center">
-<span class="text-xl md:text-2xl font-black tracking-tight text-gradient leading-none">SCALENOVA</span>
-<span class="text-[8px] md:text-[9px] font-black tracking-widest text-slate-500 dark:text-slate-400 mt-1">SYSTEMS PVT LTD</span>
+<span class="text-lg md:text-xl font-black tracking-tight text-gradient leading-none">SCALENOVA</span>
+<span class="text-[7px] md:text-[8px] font-black tracking-widest text-slate-500 dark:text-slate-400 mt-0.5">SYSTEMS PVT LTD</span>
 </div>
 </div>
 <div class="hidden lg:flex items-center space-x-1">
-<button onclick="switchPage('home')" class="nav-btn px-4 py-2 rounded-xl text-sm font-bold text-brand-600 bg-brand-50 dark:bg-slate-800 transition-all" id="nav-home"><i class="fas fa-home mr-1"></i> Home</button>
-<button onclick="switchPage('solutions')" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-solutions"><i class="fas fa-cogs mr-1"></i> Solutions</button>
-<button onclick="switchPage('clients')" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-clients"><i class="fas fa-users mr-1"></i> Clients</button>
-<button onclick="switchPage('plans')" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-plans"><i class="fas fa-tags mr-1"></i> OS Plans</button>
-<button onclick="switchPage('contact')" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-contact"><i class="fas fa-headset mr-1"></i> Contact</button>
+<button onclick="switchPage('home')" class="nav-btn px-4 py-2 rounded-xl text-xs font-bold text-brand-600 bg-brand-50 dark:bg-slate-800 transition-all" id="nav-home"><i class="fas fa-home mr-1"></i> Home</button>
+<button onclick="switchPage('solutions')" class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-solutions"><i class="fas fa-cogs mr-1"></i> Solutions</button>
+<button onclick="switchPage('clients')" class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-clients"><i class="fas fa-users mr-1"></i> Clients</button>
+<button onclick="switchPage('plans')" class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-plans"><i class="fas fa-tags mr-1"></i> OS Plans</button>
+<button onclick="switchPage('contact')" class="nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" id="nav-contact"><i class="fas fa-headset mr-1"></i> Contact</button>
 </div>
 <div class="flex items-center space-x-3 md:space-x-4">
-<button id="themeToggle" onclick="toggleTheme()" class="p-2.5 rounded-full bg-slate-200/60 dark:bg-slate-800 hover:scale-105 transition-all shadow-sm">
-<i class="fas fa-moon text-slate-700 dark:text-slate-300 text-sm"></i>
+<button id="themeToggle" onclick="toggleTheme()" class="p-2 rounded-full bg-slate-200/60 dark:bg-slate-800 hover:scale-105 transition-all shadow-sm">
+<i class="fas fa-moon text-slate-700 dark:text-slate-300 text-xs"></i>
 </button>
-<button onclick="switchPage('contact')" class="hidden sm:inline-block px-5 py-2.5 rounded-xl text-xs font-bold text-white premium-gradient shadow-lg shadow-brand-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-brand-600/40">Book a Free Consultation</button>
-<button onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 dark:text-slate-300 text-base p-2.5 rounded-full bg-slate-200/60 dark:bg-slate-800 shadow-sm focus:outline-none">
+<button onclick="switchPage('contact')" class="hidden sm:inline-block px-4 py-2 rounded-xl text-[11px] font-bold text-white premium-gradient shadow-lg shadow-brand-600/30 transition-all duration-300 hover:-translate-y-0.5">Book Consultation</button>
+<button onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 dark:text-slate-300 text-xs p-2 rounded-full bg-slate-200/60 dark:bg-slate-800 shadow-sm focus:outline-none">
 <i class="fas fa-bars"></i>
 </button>
 </div>
@@ -109,50 +109,50 @@ tailwind.config = {
 <div id="mobileMenuDrawer" class="fixed inset-y-0 right-0 max-w-xs w-full glassmorphism z-[95] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between p-8 border-l border-slate-200/60 dark:border-slate-700/60">
 <div class="space-y-8">
 <div class="flex justify-between items-center border-b pb-4 border-slate-200/40 dark:border-slate-700/40">
-<span class="text-lg font-black tracking-tight text-gradient">Menu System</span>
+<span class="text-base font-black tracking-tight text-gradient">Menu System</span>
 <button onclick="toggleMobileMenu()" class="text-slate-500 hover:text-slate-700"><i class="fas fa-times"></i></button>
 </div>
 <nav class="flex flex-col space-y-3 text-xs font-bold text-slate-600 dark:text-slate-300">
-<button onclick="switchPage('home'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-home text-brand-500 text-base"></i> <span>Home</span></button>
-<button onclick="switchPage('solutions'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-cogs text-brand-500 text-base"></i> <span>Solutions</span></button>
-<button onclick="switchPage('clients'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-users text-brand-500 text-base"></i> <span>Clients</span></button>
-<button onclick="switchPage('plans'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-tags text-brand-500 text-base"></i> <span>OS Plans</span></button>
-<button onclick="switchPage('contact'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-headset text-brand-500 text-base"></i> <span>Contact</span></button>
-<button onclick="switchPage('contact'); toggleMobileMenu();" class="flex items-center justify-center space-x-3 mt-4 p-3 rounded-xl text-white premium-gradient shadow-lg w-full"><span>Book a Free Consultation</span></button>
+<button onclick="switchPage('home'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-home text-brand-500 text-sm"></i> <span>Home</span></button>
+<button onclick="switchPage('solutions'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-cogs text-brand-500 text-sm"></i> <span>Solutions</span></button>
+<button onclick="switchPage('clients'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-users text-brand-500 text-sm"></i> <span>Clients</span></button>
+<button onclick="switchPage('plans'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-tags text-brand-500 text-sm"></i> <span>OS Plans</span></button>
+<button onclick="switchPage('contact'); toggleMobileMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-brand-50 dark:hover:bg-slate-800 transition w-full"><i class="fas fa-headset text-brand-500 text-sm"></i> <span>Contact</span></button>
+<button onclick="switchPage('contact'); toggleMobileMenu();" class="flex items-center justify-center space-x-3 mt-4 p-3 rounded-xl text-white premium-gradient shadow-lg w-full"><span>Book Free Consultation</span></button>
 </nav>
 </div>
 </div>
 
-<main id="page-home" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24 space-y-24 animate-fade-in w-full">
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative w-full">
+<main id="page-home" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16 space-y-16 md:space-y-24 animate-fade-in w-full">
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center relative w-full">
 <div class="absolute inset-0 -z-10 flex items-center justify-center">
 <div class="w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-brand-500/10 rounded-full blur-[100px] md:blur-[130px] dark:bg-brand-500/5"></div>
 </div>
-<div class="space-y-6">
-<span class="px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300 border border-brand-100 dark:border-slate-700"><i class="fas fa-shield-alt mr-1.5"></i> Reliable SaaS Architecture</span>
-<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+<div class="space-y-4 md:space-y-6">
+<span class="px-3 py-1 rounded-full text-[9px] md:text-[10px] font-bold tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300 border border-brand-100 dark:border-slate-700"><i class="fas fa-shield-alt mr-1.5"></i> Reliable SaaS Architecture</span>
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none">
 Business Automation Systems, <br/>
 <span class="text-gradient">Simplified.</span>
 </h1>
-<p class="text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-lg leading-relaxed">Streamline and centralize your business operations securely. Scalenova Systems automates repetitive tasks, schedules appointments seamlessly, and connects your database operations efficiently.</p>
-<div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-<button onclick="switchPage('plans')" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white premium-gradient shadow-xl shadow-brand-700/25 hover:scale-[1.02] transition-all flex items-center justify-center space-x-2"><i class="fas fa-th-large"></i> <span>Explore OS Plans</span></button>
-<button onclick="switchPage('solutions')" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold border border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all flex items-center justify-center space-x-2"><i class="fas fa-cogs text-brand-500"></i> <span>View Solutions</span></button>
+<p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm max-w-lg leading-relaxed">Streamline and centralize your business operations securely. Scalenova Systems automates repetitive tasks, schedules appointments seamlessly, and connects your database operations efficiently.</p>
+<div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-2 md:pt-4">
+<button onclick="switchPage('plans')" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold text-white premium-gradient shadow-xl shadow-brand-700/25 hover:scale-[1.02] transition-all flex items-center justify-center space-x-2"><i class="fas fa-th-large"></i> <span>Explore OS Plans</span></button>
+<button onclick="switchPage('solutions')" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all flex items-center justify-center space-x-2"><i class="fas fa-cogs text-brand-500"></i> <span>View Solutions</span></button>
 </div>
 </div>
 
-<div class="glassmorphism rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl relative w-full">
+<div class="glassmorphism rounded-3xl p-5 md:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl relative w-full">
 <div class="absolute -top-6 -right-6 w-20 h-20 bg-brand-500/20 rounded-full blur-[20px]"></div>
-<div class="flex items-center space-x-4 mb-8">
-<div class="w-12 h-12 rounded-2xl premium-gradient flex items-center justify-center text-white text-xl shadow-md"><i class="fas fa-server"></i></div>
+<div class="flex items-center space-x-4 mb-6 md:mb-8">
+<div class="w-11 h-11 rounded-2xl premium-gradient flex items-center justify-center text-white text-base md:text-xl shadow-md"><i class="fas fa-server"></i></div>
 <div>
-<h4 class="font-bold text-sm md:text-base tracking-tight">System Performance Monitor</h4>
-<span class="text-[10px] md:text-xs text-slate-500">Automated Enterprise Metrics</span>
+<h4 class="font-bold text-xs md:text-sm tracking-tight">System Performance Monitor</h4>
+<span class="text-[9px] md:text-xs text-slate-500">Automated Enterprise Metrics</span>
 </div>
 </div>
-<div class="space-y-5">
+<div class="space-y-4 md:space-y-5">
 <div>
-<div class="flex justify-between text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1.5">
+<div class="flex justify-between text-[9px] md:text-[11px] font-bold uppercase tracking-wider mb-1.5">
 <span class="text-slate-500">Lead Capture Uptime</span>
 <span class="text-brand-600 dark:text-brand-400">24/7/365</span>
 </div>
@@ -161,7 +161,7 @@ Business Automation Systems, <br/>
 </div>
 </div>
 <div>
-<div class="flex justify-between text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1.5">
+<div class="flex justify-between text-[9px] md:text-[11px] font-bold uppercase tracking-wider mb-1.5">
 <span class="text-slate-500">Estimated Response Speed</span>
 <span class="text-brand-600 dark:text-brand-400">Typical Range < 2s</span>
 </div>
@@ -170,7 +170,7 @@ Business Automation Systems, <br/>
 </div>
 </div>
 <div>
-<div class="flex justify-between text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1.5">
+<div class="flex justify-between text-[9px] md:text-[11px] font-bold uppercase tracking-wider mb-1.5">
 <span class="text-slate-500">CRM + ERP Syncing</span>
 <span class="text-emerald-600 dark:text-emerald-400">Operational Database</span>
 </div>
@@ -179,184 +179,210 @@ Business Automation Systems, <br/>
 </div>
 </div>
 </div>
-<div class="mt-8 pt-6 border-t border-slate-200/60 dark:border-slate-700/60 grid grid-cols-2 gap-4 text-center">
+<div class="mt-6 md:mt-8 pt-5 border-t border-slate-200/60 dark:border-slate-700/60 grid grid-cols-2 gap-4 text-center">
 <div>
-<span class="block text-xl md:text-2xl font-black tracking-tight text-gradient">Estimated</span>
-<span class="block text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Efficiency Range</span>
+<span class="block text-lg md:text-xl font-black tracking-tight text-gradient">Estimated</span>
+<span class="block text-[8px] md:text-[9px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Efficiency Range</span>
 </div>
 <div>
-<span class="block text-xl md:text-2xl font-black tracking-tight text-gradient">Secure</span>
-<span class="block text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Database Integration</span>
+<span class="block text-lg md:text-xl font-black tracking-tight text-gradient">Secure</span>
+<span class="block text-[8px] md:text-[9px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Database Integration</span>
 </div>
 </div>
 </div>
 </section>
 </main>
 
-<main id="page-solutions" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24 space-y-24 animate-fade-in hidden w-full">
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-<div class="space-y-6">
-<span class="px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wider uppercase bg-rose-50 text-rose-700 border border-rose-100 dark:bg-slate-800 dark:text-rose-300 dark:border-slate-700"><i class="fas fa-exclamation-triangle mr-1.5"></i> Operational Bottlenecks</span>
-<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Manual Chaos Slows Business Growth</h2>
-<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Relying on manual processes to bridge front-end landing pages with back-end databases creates friction, lost leads, and administrative stress:</p>
-<ul class="space-y-4 text-xs font-semibold text-slate-600 dark:text-slate-400">
+<main id="page-solutions" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16 space-y-16 md:space-y-24 animate-fade-in hidden w-full">
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center w-full">
+<div class="space-y-4 md:space-y-6">
+<span class="px-3 py-1 rounded-full text-[9px] md:text-[10px] font-bold tracking-wider uppercase bg-rose-50 text-rose-700 border border-rose-100 dark:bg-slate-800 dark:text-rose-300 dark:border-slate-700"><i class="fas fa-exclamation-triangle mr-1.5"></i> Operational Bottlenecks</span>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-none">Manual Chaos Slows Business Growth</h2>
+<p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed">Relying on manual processes to bridge front-end landing pages with back-end databases creates friction, lost leads, and administrative stress:</p>
+<ul class="space-y-3 md:space-y-4 text-[11px] md:text-xs font-semibold text-slate-600 dark:text-slate-400">
 <li class="flex items-start"><i class="fas fa-times-circle text-rose-500 mr-3 mt-0.5"></i>Inquiries sit unread in scattered messaging inboxes for hours.</li>
 <li class="flex items-start"><i class="fas fa-times-circle text-rose-500 mr-3 mt-0.5"></i>Staff struggles with maintaining consistent follow-up reminders.</li>
 <li class="flex items-start"><i class="fas fa-times-circle text-rose-500 mr-3 mt-0.5"></i>Fragmented spreadsheets provide zero clear pipeline visibility.</li>
 <li class="flex items-start"><i class="fas fa-times-circle text-rose-500 mr-3 mt-0.5"></i>Reception desk chaos manually scheduling client bookings.</li>
 </ul>
 </div>
-<div class="glassmorphism rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-6">
-<h3 class="text-lg md:text-xl font-extrabold tracking-tight text-center text-gradient">The Scalenova Automation Solution</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed text-center">We deploy reliable cloud-first architectures that automate repetitive data entry safely, letting your team focus on serving customers:</p>
-<div class="grid grid-cols-1 gap-4 pt-2 text-left text-[11px] font-semibold text-slate-600 dark:text-slate-400">
-<div class="p-3.5 rounded-xl border border-slate-200/60 dark:border-slate-700/60 bg-white/40 dark:bg-slate-800/40 flex items-center space-x-3"><i class="fas fa-check text-emerald-500 flex-shrink-0"></i> <span>Lead Capture Automation</span></div>
-<div class="p-3.5 rounded-xl border border-slate-200/60 dark:border-slate-700/60 bg-white/40 dark:bg-slate-800/40 flex items-center space-x-3"><i class="fas fa-check text-emerald-500 flex-shrink-0"></i> <span>WhatsApp & Email Alerts Layer</span></div>
-<div class="p-3.5 rounded-xl border border-slate-200/60 dark:border-slate-700/60 bg-white/40 dark:bg-slate-800/40 flex items-center space-x-3"><i class="fas fa-check text-emerald-500 flex-shrink-0"></i> <span>Digital Calendar Booking</span></div>
-<div class="p-3.5 rounded-xl border border-slate-200/60 dark:border-slate-700/60 bg-white/40 dark:bg-slate-800/40 flex items-center space-x-3"><i class="fas fa-check text-emerald-500 flex-shrink-0"></i> <span>Centralized ERP Database Views</span></div>
+<div class="glassmorphism rounded-3xl p-5 md:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-5 md:space-y-6">
+<h3 class="text-base md:text-xl font-extrabold tracking-tight text-center text-gradient">The Scalenova Automation Solution</h3>
+<p class="text-[11px] md:text-xs text-slate-600 dark:text-slate-400 leading-relaxed text-center">We deploy reliable cloud-first architectures that automate repetitive data entry safely, letting your team focus on serving customers:</p>
+<div class="grid grid-cols-1 gap-3 pt-2 text-left text-[11px] font-semibold text-slate-600 dark:text-slate-400">
+<div class="p-3 rounded-xl border border-slate-200/60 dark:border-slate-700/60 bg-white/40 dark:bg-slate-800/40 flex items-center space-x-3"><i class="fas fa-check text-emerald-500 flex-shrink-0"></i> <span>Lead Capture Automation</span></div>
+<div class="p-3 rounded-xl border border-slate-200/60 dark:border-slate-700/60 bg-white/40 dark:bg-slate-800/40 flex items-center space-x-3"><i class="fas fa-check text-emerald-500 flex-shrink-0"></i> <span>WhatsApp & Email Alerts Layer</span></div>
+<div class="p-3 rounded-xl border border-slate-200/60 dark:border-slate-700/60 bg-white/40 dark:bg-slate-800/40 flex items-center space-x-3"><i class="fas fa-check text-emerald-500 flex-shrink-0"></i> <span>Digital Calendar Booking</span></div>
+<div class="p-3 rounded-xl border border-slate-200/60 dark:border-slate-700/60 bg-white/40 dark:bg-slate-800/40 flex items-center space-x-3"><i class="fas fa-check text-emerald-500 flex-shrink-0"></i> <span>Centralized ERP Database Views</span></div>
 </div>
 </div>
 </section>
 
-<section class="space-y-10 border-t border-slate-200/40 dark:border-slate-800/40 pt-16">
+<section class="space-y-8 md:space-y-10 border-t border-slate-200/40 dark:border-slate-800/40 pt-12 md:pt-16">
 <div class="text-center max-w-2xl mx-auto space-y-2">
-<h3 class="text-2xl md:text-3xl font-black tracking-tight">Core System Architecture Features</h3>
-<p class="text-[11px] md:text-xs text-slate-500 dark:text-slate-400">Unified automation tools engineered to reduce operational friction.</p>
+<h3 class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Core System Architecture Features</h3>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400">Unified automation tools engineered to reduce operational friction.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
 <i class="fas fa-bolt text-2xl text-gradient"></i>
-<h4 class="font-bold text-sm">Lead Automation</h4>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Direct website form routing streamlining daily lead capture.</p>
+<h4 class="font-bold text-xs md:text-sm">Lead Automation</h4>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Direct website form routing streamlining daily lead capture.</p>
 </div>
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
 <i class="fab fa-whatsapp text-2xl text-gradient"></i>
-<h4 class="font-bold text-sm">WhatsApp Alerts</h4>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Instant business templates keeping prospect communication warm.</p>
+<h4 class="font-bold text-xs md:text-sm">WhatsApp Alerts</h4>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Instant business templates keeping prospect communication warm.</p>
 </div>
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
 <i class="fas fa-envelope text-2xl text-gradient"></i>
-<h4 class="font-bold text-sm">Email Notifications</h4>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Automated alerts sent directly upon inquiry submissions.</p>
+<h4 class="font-bold text-xs md:text-sm">Email Notifications</h4>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Automated alerts sent directly upon inquiry submissions.</p>
 </div>
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
 <i class="fas fa-database text-2xl text-gradient"></i>
-<h4 class="font-bold text-sm">CRM Synchronization</h4>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Automated updates compiling business records accurately.</p>
+<h4 class="font-bold text-xs md:text-sm">CRM Synchronization</h4>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Automated updates compiling business records accurately.</p>
 </div>
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
 <i class="fas fa-calendar-alt text-2xl text-gradient"></i>
-<h4 class="font-bold text-sm">Booking Automation</h4>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Calendar hooks reducing missed meetings and appointment friction.</p>
+<h4 class="font-bold text-xs md:text-sm">Booking Automation</h4>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Calendar hooks reducing missed meetings and appointment friction.</p>
 </div>
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
 <i class="fas fa-server text-2xl text-gradient"></i>
-<h4 class="font-bold text-sm">ERP Tracking Layer</h4>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Systematic logging of back-end operating pipelines.</p>
+<h4 class="font-bold text-xs md:text-sm">ERP Tracking Layer</h4>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Systematic logging of back-end operating pipelines.</p>
 </div>
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
 <i class="fas fa-desktop text-2xl text-gradient"></i>
-<h4 class="font-bold text-sm">Dashboard Reporting</h4>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Central Looker Studio or AppSheet operational metric displays.</p>
+<h4 class="font-bold text-xs md:text-sm">Dashboard Reporting</h4>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Central Looker Studio or AppSheet operational metric displays.</p>
 </div>
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
 <i class="fas fa-tasks text-2xl text-gradient"></i>
-<h4 class="font-bold text-sm">Task Updates Workflow</h4>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Track employee performance and ticket statuses conveniently.</p>
+<h4 class="font-bold text-xs md:text-sm">Task Updates Workflow</h4>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Track employee performance and ticket statuses conveniently.</p>
 </div>
 </div>
 </section>
 </main>
 
-<main id="page-clients" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24 space-y-24 animate-fade-in hidden w-full">
+<main id="page-clients" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16 space-y-16 md:space-y-24 animate-fade-in hidden w-full">
 <div class="text-center max-w-3xl mx-auto space-y-3">
 <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-users"></i> Client Trust & Portal</span>
-<h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">Trusted by MSMEs Across India</h2>
-<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Delivering enterprise process organization securely for growing firms and consultancies.</p>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-none">Trusted by MSMEs Across India</h2>
+<p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed">Delivering enterprise process organization securely for growing firms and consultancies.</p>
 </div>
 
-<section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
-<div class="space-y-6">
-    <div class="glassmorphism p-5 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 flex items-start space-x-3">
-        <i class="fas fa-bolt text-brand-600 mt-1"></i>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center w-full">
+<div class="space-y-4 md:space-y-6">
+    <div class="glassmorphism p-4 md:p-5 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 flex items-start space-x-3">
+        <i class="fas fa-bolt text-brand-600 mt-1 flex-shrink-0 text-xs"></i>
         <div>
-            <h4 class="font-bold text-xs">Faster Lead Response</h4>
-            <p class="text-[10px] text-slate-500 dark:text-slate-400">Automation reduces time gaps in reaching back to prospects.</p>
+            <h4 class="font-bold text-[11px] md:text-xs">Faster Lead Response</h4>
+            <p class="text-[9px] md:text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Automation reduces time gaps in reaching back to prospects.</p>
         </div>
     </div>
-    <div class="glassmorphism p-5 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 flex items-start space-x-3">
-        <i class="fas fa-tasks text-brand-600 mt-1"></i>
+    <div class="glassmorphism p-4 md:p-5 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 flex items-start space-x-3">
+        <i class="fas fa-tasks text-brand-600 mt-1 flex-shrink-0 text-xs"></i>
         <div>
-            <h4 class="font-bold text-xs">Organized CRM Pipeline</h4>
-            <p class="text-[10px] text-slate-500 dark:text-slate-400">Keeps potential deals clearly organized from contact to closure.</p>
+            <h4 class="font-bold text-[11px] md:text-xs">Organized CRM Pipeline</h4>
+            <p class="text-[9px] md:text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Keeps potential deals clearly organized from contact to closure.</p>
         </div>
     </div>
-    <div class="glassmorphism p-5 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 flex items-start space-x-3">
-        <i class="fas fa-sync-alt text-brand-600 mt-1"></i>
+    <div class="glassmorphism p-4 md:p-5 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 flex items-start space-x-3">
+        <i class="fas fa-sync-alt text-brand-600 mt-1 flex-shrink-0 text-xs"></i>
         <div>
-            <h4 class="font-bold text-xs">Reduced Manual Entry</h4>
-            <p class="text-[10px] text-slate-500 dark:text-slate-400">Automates repetitive database records, saving administrative time.</p>
+            <h4 class="font-bold text-[11px] md:text-xs">Reduced Manual Entry</h4>
+            <p class="text-[9px] md:text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Automates repetitive database records, saving administrative time.</p>
         </div>
     </div>
 </div>
-<div class="glassmorphism p-8 rounded-3xl border border-slate-200/50 dark:border-slate-700/50 space-y-6 shadow-xl text-center">
-    <i class="fas fa-chart-line text-4xl text-gradient"></i>
-    <h3 class="font-black text-sm md:text-base tracking-tight">Estimated System Impact Ranges</h3>
+<div class="glassmorphism p-6 md:p-8 rounded-3xl border border-slate-200/50 dark:border-slate-700/50 space-y-6 shadow-xl text-center">
+    <i class="fas fa-chart-line text-3xl md:text-4xl text-gradient"></i>
+    <h3 class="font-black text-xs md:text-base tracking-tight">Estimated System Impact Ranges</h3>
     <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200/40 dark:border-slate-700/40">
         <div>
-            <span class="block text-2xl font-black tracking-tight text-brand-700">Typical</span>
-            <span class="block text-[9px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Response Improvement</span>
+            <span class="block text-xl md:text-2xl font-black tracking-tight text-brand-700">Typical</span>
+            <span class="block text-[8px] md:text-[9px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Response Improvement</span>
         </div>
         <div>
-            <span class="block text-2xl font-black tracking-tight text-emerald-600">Stable</span>
-            <span class="block text-[9px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Pipeline Visibility</span>
+            <span class="block text-xl md:text-2xl font-black tracking-tight text-emerald-600">Stable</span>
+            <span class="block text-[8px] md:text-[9px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Pipeline Visibility</span>
         </div>
     </div>
 </div>
 </section>
 
-<section class="space-y-6 border-t border-slate-200/40 dark:border-slate-800/40 pt-16 text-center">
-<span class="text-[9px] font-black uppercase tracking-widest text-slate-400">Operating in Modern MSME Ecosystems</span>
-<div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 dark:opacity-40 grayscale filter">
-<i class="fas fa-hospital text-3xl"></i> City Care Clinic
-<i class="fas fa-tooth text-3xl"></i> Sai Dental Clinic
-
-<i class="fas fa-building text-3xl"></i> PrimeNest Realty
-<i class="fas fa-hammer text-3xl"></i> UrbanSpace Developers
-
-<i class="fas fa-book text-3xl"></i> BrightFuture Coaching
-<i class="fas fa-graduation-cap text-3xl"></i> Excel Academy
-
-<i class="fas fa-cut text-3xl"></i> GlamUp Salon
-<i class="fas fa-paint-brush text-3xl"></i> StylePoint Studio
-
-<i class="fas fa-tools text-3xl"></i> RapidFix Services
-<i class="fas fa-utensils text-3xl"></i> SpiceHub Restaurant
+<section class="space-y-6 border-t border-slate-200/40 dark:border-slate-800/40 pt-12 md:pt-16 text-center">
+<span class="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-slate-400 block mb-6">Operating in Modern MSME Ecosystems</span>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 text-[10px] md:text-xs font-semibold text-slate-600 dark:text-slate-400">
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-hospital text-base text-brand-700"></i>
+        <span>City Care Clinic</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-tooth text-base text-brand-700"></i>
+        <span>Sai Dental Clinic</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-building text-base text-brand-700"></i>
+        <span>PrimeNest Realty</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-hammer text-base text-brand-700"></i>
+        <span>UrbanSpace Developers</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-book text-base text-brand-700"></i>
+        <span>BrightFuture Coaching</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-graduation-cap text-base text-brand-700"></i>
+        <span>Excel Academy</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-cut text-base text-brand-700"></i>
+        <span>GlamUp Salon</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-paint-brush text-base text-brand-700"></i>
+        <span>StylePoint Studio</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20">
+        <i class="fas fa-tools text-base text-brand-700"></i>
+        <span>RapidFix Services</span>
+    </div>
+    <div class="glassmorphism p-3.5 rounded-xl border border-slate-200/40 dark:border-slate-700/40 flex flex-col items-center justify-center space-y-2 h-20 sm:col-span-2 lg:col-span-1">
+        <i class="fas fa-utensils text-base text-brand-700"></i>
+        <span>SpiceHub Restaurant</span>
+    </div>
 </div>
 </section>
 
-<section class="space-y-8 border-t border-slate-200/40 dark:border-slate-800/40 pt-16">
+<section class="space-y-6 md:space-y-8 border-t border-slate-200/40 dark:border-slate-800/40 pt-12 md:pt-16">
 <div class="text-center space-y-1.5">
 <h3 class="text-xl md:text-2xl font-black tracking-tight">What Business Owners Say</h3>
-<p class="text-[10px] md:text-[11px] text-slate-500 dark:text-slate-400">Real operational feedback from our MSME network.</p>
+<p class="text-[9px] md:text-[11px] text-slate-500 dark:text-slate-400">Real operational feedback from our MSME network.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto">
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 space-y-4 shadow-sm">
-<div class="flex items-center space-x-1 text-amber-500 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic">"Helped us organize our leads significantly and improved follow-ups cleanly. We no longer miss high-value client inquiries thanks to automation."</p>
-<div class="flex items-center space-x-2 pt-2 border-t border-slate-200/40 dark:border-slate-700/40">
-    <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-[10px]">RV</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl mx-auto">
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 space-y-4 shadow-sm">
+<div class="flex items-center space-x-1 text-amber-500 text-[10px] md:text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p class="text-[11px] md:text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic">"Helped us organize our leads significantly and improved follow-ups cleanly. We no longer miss high-value client inquiries thanks to automation."</p>
+<div class="flex items-center space-x-3 pt-2 border-t border-slate-200/40 dark:border-slate-700/40">
+    <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-[9px] text-slate-800">RV</div>
     <div>
         <span class="block text-[10px] font-black tracking-tight">R. Verma</span>
         <span class="block text-[8px] font-bold text-slate-400 uppercase tracking-wider">Clinic Operations</span>
     </div>
 </div>
 </div>
-<div class="glassmorphism p-6 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 space-y-4 shadow-sm">
-<div class="flex items-center space-x-1 text-amber-500 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic">"Centralizing our operational database has saved massive administrative hours. Following up on automated schedules prevents potential clients from slipping through."</p>
-<div class="flex items-center space-x-2 pt-2 border-t border-slate-200/40 dark:border-slate-700/40">
-    <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-[10px]">SK</div>
+<div class="glassmorphism p-5 md:p-6 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 space-y-4 shadow-sm">
+<div class="flex items-center space-x-1 text-amber-500 text-[10px] md:text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p class="text-[11px] md:text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic">"Centralizing our operational database has saved massive administrative hours. Following up on automated schedules prevents potential clients from slipping through."</p>
+<div class="flex items-center space-x-3 pt-2 border-t border-slate-200/40 dark:border-slate-700/40">
+    <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-[9px] text-slate-800">SK</div>
     <div>
         <span class="block text-[10px] font-black tracking-tight">S. Kumar</span>
         <span class="block text-[8px] font-bold text-slate-400 uppercase tracking-wider">Realty Enterprise</span>
@@ -367,17 +393,17 @@ Business Automation Systems, <br/>
 </section>
 </main>
 
-<main id="page-plans" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24 space-y-16 animate-fade-in hidden w-full">
+<main id="page-plans" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16 space-y-12 md:space-y-16 animate-fade-in hidden w-full">
 <div class="text-center max-w-3xl mx-auto space-y-3">
 <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-tags"></i> Transparent Systems Pricing</span>
-<h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">Unified Operating System Plans</h2>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-none">Unified Operating System Plans</h2>
 <p class="text-slate-600 dark:text-slate-400 text-sm">Cost-efficient, low-maintenance architectures designed to replace bloated monthly software subscriptions.</p>
 </div>
 <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
 <div class="glassmorphism p-6 md:p-8 rounded-2xl shadow-lg border border-slate-200/40 dark:border-slate-700/40 hover:-translate-y-1.5 transition-all duration-300 space-y-6 flex flex-col justify-between w-full">
 <div class="space-y-4">
 <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300"><i class="fas fa-bolt"></i> Lead Capture</span>
-<h3 class="text-lg lg:text-base xl:text-lg font-black tracking-tight truncate">Core OS - “LeadFlow Lite”</h3>
+<h3 class="text-sm md:text-base font-black tracking-tight truncate">Core OS - “LeadFlow Lite”</h3>
 <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Best for small salons, local shops, freelancers, and beginner clinics needing basic lead security.</p>
 <div class="flex items-baseline space-x-1">
 <span class="text-3xl md:text-4xl font-extrabold tracking-tight">₹4,999</span>
@@ -400,7 +426,7 @@ Business Automation Systems, <br/>
 <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-0.5 rounded-full text-[9px] font-black tracking-widest uppercase premium-gradient text-white shadow-sm whitespace-nowrap"><i class="fas fa-certificate"></i> Recommended System</div>
 <div class="space-y-4 mt-2">
 <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-indigo-50 text-indigo-700 dark:bg-slate-800 dark:text-indigo-300"><i class="fas fa-chart-line"></i> Conversion System</span>
-<h3 class="text-lg lg:text-base xl:text-lg font-black tracking-tight truncate">Growth OS - “ConvertFlow Pro”</h3>
+<h3 class="text-sm md:text-base font-black tracking-tight truncate">Growth OS - “ConvertFlow Pro”</h3>
 <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Best for Clinics, Real Estate, Coaching institutes, and service businesses.</p>
 <div class="flex items-baseline space-x-1">
 <span class="text-3xl md:text-4xl font-extrabold tracking-tight">₹12,999</span>
@@ -425,7 +451,7 @@ Business Automation Systems, <br/>
 <div class="glassmorphism p-6 md:p-8 rounded-2xl shadow-lg border border-slate-200/40 dark:border-slate-700/40 hover:-translate-y-1.5 transition-all duration-300 space-y-6 flex flex-col justify-between w-full">
 <div class="space-y-4">
 <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300"><i class="fas fa-crown"></i> Full ERP System</span>
-<h3 class="text-lg lg:text-base xl:text-lg font-black tracking-tight truncate">Elite OS - “AutoPilot ERP”</h3>
+<h3 class="text-sm md:text-base font-black tracking-tight truncate">Elite OS - “AutoPilot ERP”</h3>
 <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Best for multi-staff businesses, high-volume MSMEs, agencies, and clinic chains.</p>
 <div class="flex items-baseline space-x-1">
 <span class="text-2xl md:text-3xl font-extrabold tracking-tight">₹34,999+</span>
@@ -453,88 +479,12 @@ Business Automation Systems, <br/>
 </section>
 </main>
 
-<main id="page-careers" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24 space-y-20 animate-fade-in hidden w-full">
-<div class="text-center max-w-3xl mx-auto space-y-3">
-<span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-briefcase"></i> Join our engineering deployment factory</span>
-<h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">Careers & Internships</h2>
-<p class="text-slate-600 dark:text-slate-400 text-sm">We hire learners, builders, and problem solvers focused on rapid template-driven deployment.</p>
-</div>
-<section class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-<div class="glassmorphism p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-3">
-<span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
-<h3 class="text-xl font-black tracking-tight">Automation Developer</h3>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Design serverless backends, automated hooks, and central database CRM automations for MSME clients.</p>
-</div>
-<div class="glassmorphism p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-3">
-<span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
-<h3 class="text-xl font-black tracking-tight">B2B Sales Development</h3>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Run preliminary system audits with MSMEs and consult local owners on shifting from manual to automated CRM pipelines.</p>
-</div>
-<div class="glassmorphism p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-3">
-<span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
-<h3 class="text-xl font-black tracking-tight">Client Success & Ops</h3>
-<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Manage live deployments, track client OS performance, troubleshoot CRM issues, and conduct regular optimization reviews.</p>
-</div>
-</section>
-
-<section class="glassmorphism p-8 md:p-10 rounded-3xl border border-slate-200/60 dark:border-slate-700/60 shadow-xl space-y-8 animate-fade-in w-full max-w-4xl mx-auto">
-<div class="text-center space-y-2">
-<h3 class="text-xl md:text-2xl font-black tracking-tight text-gradient"><i class="fas fa-graduation-cap mr-1"></i> Application Portal</h3>
-<p class="text-[11px] md:text-xs text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Submit your details below to apply for our full-time roles or join our student internship talent factory.</p>
-</div>
-<form onsubmit="handleFormSubmit(event, 'Application successfully submitted. Our HR team will be in touch shortly.')" class="space-y-5 pt-4">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-<div>
-<label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Full Name</label>
-<input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
-</div>
-<div>
-<label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Email Address</label>
-<input type="email" placeholder="email@address.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-<div>
-<label class="block text-[10px] font-bold uppercase tracking-wider mb-2">WhatsApp Number</label>
-<input type="tel" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
-</div>
-<div>
-<label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Relevant Department</label>
-<select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all text-slate-600 dark:text-slate-300" required>
-<option value="">Select Department</option>
-<option value="Tech & Deployment">Tech & Deployment</option>
-<option value="Sales & BDM">Sales & BDM</option>
-<option value="Client Success & Ops">Client Success & Ops</option>
-<option value="Marketing & Media">Marketing & Media</option>
-<option value="HR & Admin">HR & Admin</option>
-</select>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-<div>
-<label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Application Type</label>
-<select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all text-slate-600 dark:text-slate-300" required>
-<option value="">Select Role Type</option>
-<option value="Full Time">Full-Time Position</option>
-<option value="Internship">Internship Program</option>
-</select>
-</div>
-<div>
-<label class="block text-[10px] font-bold uppercase tracking-wider mb-2">Upload Resume / PDF Document</label>
-<input type="file" accept=".pdf" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs file:mr-4 file:py-1.5 file:px-4 file:rounded-lg file:border-0 file:text-[10px] file:font-black file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 transition-all" required>
-</div>
-</div>
-<button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl mt-4">Submit Application</button>
-</form>
-</section>
-</main>
-
-<main id="page-contact" class="flex-grow max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start animate-fade-in hidden w-full">
-<div class="space-y-8">
+<main id="page-contact" class="flex-grow max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start animate-fade-in hidden w-full">
+<div class="space-y-6 md:space-y-8">
 <div class="space-y-2">
 <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-headphones"></i> Secure Direct System Connection</span>
-<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Deploy Your Business OS</h2>
-<p class="text-slate-600 dark:text-slate-400 text-[11px] md:text-xs leading-relaxed">Reach out directly or schedule a system audit. We are ready to transition your firm to unified automated architectures.</p>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-none">Deploy Your Business OS</h2>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Reach out directly or schedule a system audit. We are ready to transition your firm to unified automated architectures.</p>
 </div>
 <div class="space-y-5">
 <div class="flex items-center space-x-4">
@@ -561,9 +511,9 @@ Business Automation Systems, <br/>
 </div>
 </div>
 <div class="space-y-8 w-full">
-<div class="glassmorphism p-6 md:p-8 rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-2xl space-y-6 w-full">
+<div class="glassmorphism p-5 md:p-8 rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-2xl space-y-5 md:space-y-6 w-full">
 <div class="text-center space-y-1.5">
-<h3 class="text-lg md:text-xl font-black tracking-tight">📞 Contact Form</h3>
+<h3 class="text-base md:text-xl font-black tracking-tight">📞 Contact Form</h3>
 <p class="text-[10px] md:text-[11px] text-slate-500 dark:text-slate-400">Request a consultation to audit your current business operating pipeline.</p>
 </div>
 <form onsubmit="handleFormSubmit(event, 'Audit request submitted successfully. Our engineers will reach out via your preferred contact method shortly.')" class="space-y-4">
@@ -615,24 +565,24 @@ Business Automation Systems, <br/>
 <option value="Email">Email</option>
 </select>
 </div>
-<button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl shadow-brand-600/20">🚀 Book a Free Consultation</button>
+<button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl shadow-brand-600/20">🚀 Book Free Consultation</button>
 </form>
 </div>
 </div>
 </main>
 
-<main id="page-privacy" class="flex-grow max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16 hidden w-full animate-fade-in">
+<main id="page-privacy" class="flex-grow max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-16 hidden w-full animate-fade-in">
     <div class="glassmorphism p-6 md:p-10 rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-xl space-y-6">
         <div class="flex items-center space-x-3 border-b pb-4 border-slate-200 dark:border-slate-700">
             <div class="w-12 h-12 rounded-2xl premium-gradient flex items-center justify-center text-white text-xl shadow-md"><i class="fas fa-lock"></i></div>
             <div>
-                <h2 class="text-xl md:text-2xl font-black tracking-tight">Privacy Policy</h2>
-                <span class="text-[10px] md:text-xs font-bold text-slate-500">Scalenova Systems Pvt Ltd</span>
+                <h2 class="text-base md:text-2xl font-black tracking-tight">Privacy Policy</h2>
+                <span class="text-[9px] md:text-xs font-bold text-slate-500">Scalenova Systems Pvt Ltd</span>
             </div>
         </div>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Scalenova Systems Pvt Ltd (“Company”, “We”, “Us”, “Our”) respects the privacy of its users, clients, and business partners. This Privacy Policy explains how we collect, use, store, and protect information when you use our website, services, or digital business systems.</p>
         
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-thumbtack mr-1"></i> 1. Information We Collect</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-thumbtack mr-1"></i> 1. Information We Collect</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We may collect the following limited business-related information:</p>
         <ul class="list-disc pl-5 text-xs space-y-2 text-slate-600 dark:text-slate-400">
             <li>Full Name (for business contact purposes)</li>
@@ -643,7 +593,7 @@ Business Automation Systems, <br/>
         </ul>
         <p class="text-xs font-semibold text-rose-600 dark:text-rose-400 bg-rose-50/50 dark:bg-slate-800 border border-rose-100 dark:border-slate-700 p-3 rounded-xl">We do not collect sensitive personal data such as financial passwords, Aadhaar, PAN, banking credentials, or personal private data.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-cogs mr-1"></i> 2. How We Use Your Information</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-cogs mr-1"></i> 2. How We Use Your Information</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We use collected data strictly for legitimate business purposes, including:</p>
         <ul class="list-disc pl-5 text-xs space-y-2 text-slate-600 dark:text-slate-400">
             <li>Setting up CRM and automation systems</li>
@@ -655,7 +605,7 @@ Business Automation Systems, <br/>
         </ul>
         <p class="text-xs text-slate-600 dark:text-slate-400 italic">We do not use data for unrelated marketing or third-party resale.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-sync-alt mr-1"></i> 3. Data Sharing & Disclosure</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-sync-alt mr-1"></i> 3. Data Sharing & Disclosure</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We do not sell, rent, or trade your data. Your information may only be shared with:</p>
         <ul class="list-disc pl-5 text-xs space-y-2 text-slate-600 dark:text-slate-400">
             <li>Authorized internal team members for project execution</li>
@@ -664,29 +614,29 @@ Business Automation Systems, <br/>
         </ul>
         <p class="text-xs text-slate-600 dark:text-slate-400">All partners and service providers are expected to maintain confidentiality and data protection standards.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-shield-alt mr-1"></i> 4. Data Security</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-shield-alt mr-1"></i> 4. Data Security</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We implement reasonable technical and organizational safeguards, including secured cloud access-controlled systems, encrypted communications, and restricted internal requirements.</p>
         <p class="text-xs text-slate-600 dark:text-slate-400 italic">However, no digital system is 100% secure, and we cannot guarantee absolute security.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-folder-open mr-1"></i> 5. Data Retention</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-folder-open mr-1"></i> 5. Data Retention</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We retain business data only for as long as required to deliver services, maintain client systems, and comply with legal, tax, or regulatory obligations. After service termination, data may be securely archived or deleted upon request, subject to legal requirements.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-user mr-1"></i> 6. Your Rights</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-user mr-1"></i> 6. Your Rights</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Depending on applicable Indian data protection laws, you may request access to your stored data, request correction or updates, request deletion of your data (where legally permissible), or withdraw consent for communication (where applicable). Requests can be sent to our official contact email provided on the website.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-satellite-dish mr-1"></i> 7. Cookies & Tracking</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-satellite-dish mr-1"></i> 7. Cookies & Tracking</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Our website may use cookies or similar technologies to improve website performance, understand user behavior and analytics, and enhance user experience. You can disable cookies through your browser settings if desired.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-globe mr-1"></i> 8. Third-Party Services</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-globe mr-1"></i> 8. Third-Party Services</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Our systems may integrate with third-party platforms such as Google Workspace (Sheets, Forms, Apps Script), WhatsApp Business API providers, CRM tools, or Analytics platforms. These platforms operate under their own privacy policies, and we encourage users to review them separately.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-balance-scale mr-1"></i> 9. Legal Compliance</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-balance-scale mr-1"></i> 9. Legal Compliance</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We comply with applicable Indian data protection regulations, including principles outlined under the Digital Personal Data Protection Act, 2023 (DPDP Act) and other relevant IT laws.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-sync mr-1"></i> 10. Updates to This Policy</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-sync mr-1"></i> 10. Updates to This Policy</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-phone-alt mr-1"></i> 11. Contact Us</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-phone-alt mr-1"></i> 11. Contact Us</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">For any privacy-related concerns, data requests, or queries:<br>
         <strong>Scalenova Systems Pvt Ltd</strong><br>
         📧 Email: info@scalenovasystems.com<br>
@@ -694,24 +644,24 @@ Business Automation Systems, <br/>
     </div>
 </main>
 
-<main id="page-terms" class="flex-grow max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16 hidden w-full animate-fade-in">
+<main id="page-terms" class="flex-grow max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-16 hidden w-full animate-fade-in">
     <div class="glassmorphism p-6 md:p-10 rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-xl space-y-6">
         <div class="flex items-center space-x-3 border-b pb-4 border-slate-200 dark:border-slate-700">
             <div class="w-12 h-12 rounded-2xl premium-gradient flex items-center justify-center text-white text-xl shadow-md"><i class="fas fa-file-invoice-dollar"></i></div>
             <div>
-                <h2 class="text-xl md:text-2xl font-black tracking-tight">Terms of Service</h2>
-                <span class="text-[10px] md:text-xs font-bold text-slate-500">Scalenova Systems Pvt Ltd</span>
+                <h2 class="text-base md:text-2xl font-black tracking-tight">Terms of Service</h2>
+                <span class="text-[9px] md:text-xs font-bold text-slate-500">Scalenova Systems Pvt Ltd</span>
             </div>
         </div>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">These Terms of Service (“Terms”) govern your use of services provided by Scalenova Systems Pvt Ltd (“Company”, “We”, “Us”, “Our”). By accessing our website, services, or Business Operating System solutions, you (“Client”, “User”, “You”) agree to these Terms.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-cogs mr-1"></i> 1. Service Description</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-cogs mr-1"></i> 1. Service Description</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Scalenova Systems Pvt Ltd provides business automation and operating system solutions for SMEs, including CRM and lead management systems, Automated workflow systems, Google-based business dashboards, WhatsApp and email automation systems, Website deployment, and AppSheet / Looker Studio / Google Sheets integrations. All services are delivered using a template-driven, cloud-based deployment model customized for each client.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-handshake mr-1"></i> 2. Acceptance of Terms</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-handshake mr-1"></i> 2. Acceptance of Terms</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">By using our services, you confirm that you are authorized to act on behalf of your business, you agree to provide accurate and complete information, you understand the scope of services being provided, and you accept these Terms and any future updates.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-credit-card mr-1"></i> 3. Payments & Fees</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-credit-card mr-1"></i> 3. Payments & Fees</h3>
         <ul class="list-disc pl-5 text-xs space-y-2 text-slate-600 dark:text-slate-400">
             <li>All setup fees and subscription charges must be paid as agreed before project initiation or activation</li>
             <li>Setup fees are non-refundable once work has started, due to the nature of digital configuration and resource allocation</li>
@@ -719,42 +669,118 @@ Business Automation Systems, <br/>
             <li>Failure to pay may result in suspension or termination of services</li>
         </ul>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-ban mr-1"></i> 4. Refund Policy</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-ban mr-1"></i> 4. Refund Policy</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Due to the digital and customized nature of our services: All upfront setup fees are strictly non-refundable, no refunds will be issued for partially completed work after onboarding begins, and refunds are not applicable for delays caused by incomplete client inputs or approvals.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-tools mr-1"></i> 5. Client Responsibilities</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-tools mr-1"></i> 5. Client Responsibilities</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">You agree to provide timely business info, share necessary secure cloud access, cooperate during onboarding, and guarantee lawful use of the platform. Missing inputs will impact deployment timelines.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-box mr-1"></i> 6. Service Delivery</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-box mr-1"></i> 6. Service Delivery</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Services are deployed using a template-based automation framework. Typical onboarding depends on the complexity of the chosen module package. <strong>We do not guarantee specific business outcomes such as sales volume or raw lead conversion rates.</strong></p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-lock mr-1"></i> 7. Data & System Usage</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-lock mr-1"></i> 7. Data & System Usage</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">All systems are hosted on secure cloud platforms (e.g., Google ecosystem and approved third-party tools). Client data remains under operational use for system functionality and is not sold or misused under any circumstances. Refer to our Privacy Policy for detailed data handling practices.</p>
 
-        <h3 class="font-bold text-sm text-rose-600 dark:text-rose-400 pt-2"><i class="fas fa-exclamation-triangle mr-1"></i> 8. Limitation of Liability</h3>
+        <h3 class="font-bold text-xs md:text-sm text-rose-600 dark:text-rose-400 pt-2"><i class="fas fa-exclamation-triangle mr-1"></i> 8. Limitation of Liability</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Scalenova Systems Pvt Ltd shall not be held liable for business losses, third-party platform failures (Google, WhatsApp API, etc.), client-side misconfiguration, or downtime caused by external vendors. Liability is limited strictly to service delivery scope.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-sync mr-1"></i> 9. Modifications to Service</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-sync mr-1"></i> 9. Modifications to Service</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We reserve the right to improve architecture, update automation templates, and add/remove features. Clients will be informed where changes directly affect daily service usage.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-ban mr-1"></i> 10. Termination</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-ban mr-1"></i> 10. Termination</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Services can be terminated or suspended if timely payments aren't received, misuse/harmful activity is detected, or based on a direct prior written client request.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-balance-scale mr-1"></i> 11. Legal Compliance</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-balance-scale mr-1"></i> 11. Legal Compliance</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">These Terms are governed under the laws of India and comply with applicable IT laws and digital service regulations, including principles under the Digital Personal Data Protection Act, 2023 (DPDP Act).</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-sync mr-1"></i> 12. Updates to Terms</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-sync mr-1"></i> 12. Updates to Terms</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">We may update these Terms periodically. Continued use of services after updates implies acceptance of revised Terms.</p>
 
-        <h3 class="font-bold text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-phone-alt mr-1"></i> 13. Contact Information</h3>
+        <h3 class="font-bold text-xs md:text-sm text-brand-700 dark:text-brand-300 pt-2"><i class="fas fa-phone-alt mr-1"></i> 13. Contact Information</h3>
         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed"><strong>Scalenova Systems Pvt Ltd</strong><br>
         📧 Email: info@scalenovasystems.com<br>
         🌐 Website: <button onclick="switchPage('home')" class="text-brand-500 font-bold hover:underline">Scalenova Systems</button></p>
     </div>
 </main>
 
-<footer class="glassmorphism border-t border-slate-200/60 dark:border-slate-700/60 py-12 px-6 mt-auto w-full">
-<div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<main id="page-careers" class="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16 space-y-16 animate-fade-in hidden w-full">
+<div class="text-center max-w-3xl mx-auto space-y-3">
+<span class="text-xs font-extrabold uppercase tracking-widest text-brand-600"><i class="fas fa-briefcase"></i> Join our engineering deployment factory</span>
+<h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Careers & Internships</h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm">We hire learners, builders, and problem solvers focused on rapid template-driven deployment.</p>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
+<div class="glassmorphism p-6 md:p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-3">
+<span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
+<h3 class="text-base md:text-lg font-black tracking-tight">Automation Developer</h3>
+<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Design serverless backends, automated hooks, and central database CRM automations for MSME clients.</p>
+</div>
+<div class="glassmorphism p-6 md:p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-3">
+<span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
+<h3 class="text-base md:text-lg font-black tracking-tight">B2B Sales Development</h3>
+<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Run preliminary system audits with MSMEs and consult local owners on shifting from manual to automated CRM pipelines.</p>
+</div>
+<div class="glassmorphism p-6 md:p-8 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-3">
+<span class="px-3 py-1 rounded-lg text-[9px] font-black tracking-wider uppercase bg-emerald-50 text-emerald-700 dark:bg-slate-800 dark:text-emerald-400">Full Time / Paid</span>
+<h3 class="text-base md:text-lg font-black tracking-tight">Client Success & Ops</h3>
+<p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">Manage live deployments, track client OS performance, troubleshoot CRM issues, and conduct regular optimization reviews.</p>
+</div>
+</section>
+
+<section class="glassmorphism p-6 md:p-10 rounded-3xl border border-slate-200/60 dark:border-slate-700/60 shadow-xl space-y-6 md:space-y-8 animate-fade-in w-full max-w-4xl mx-auto">
+<div class="text-center space-y-2">
+<h3 class="text-base md:text-2xl font-black tracking-tight text-gradient"><i class="fas fa-graduation-cap mr-1"></i> Application Portal</h3>
+<p class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Submit your details below to apply for our full-time roles or join our student internship talent factory.</p>
+</div>
+<form onsubmit="handleFormSubmit(event, 'Application successfully submitted. Our HR team will be in touch shortly.')" class="space-y-4 md:space-y-5 pt-2">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+<div>
+<label class="block text-[9px] md:text-[10px] font-bold uppercase tracking-wider mb-2">Full Name</label>
+<input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+</div>
+<div>
+<label class="block text-[9px] md:text-[10px] font-bold uppercase tracking-wider mb-2">Email Address</label>
+<input type="email" placeholder="email@address.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+<div>
+<label class="block text-[9px] md:text-[10px] font-bold uppercase tracking-wider mb-2">WhatsApp Number</label>
+<input type="tel" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all" required>
+</div>
+<div>
+<label class="block text-[9px] md:text-[10px] font-bold uppercase tracking-wider mb-2">Relevant Department</label>
+<select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all text-slate-600 dark:text-slate-300" required>
+<option value="">Select Department</option>
+<option value="Tech & Deployment">Tech & Deployment</option>
+<option value="Sales & BDM">Sales & BDM</option>
+<option value="Client Success & Ops">Client Success & Ops</option>
+<option value="Marketing & Media">Marketing & Media</option>
+<option value="HR & Admin">HR & Admin</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+<div>
+<label class="block text-[9px] md:text-[10px] font-bold uppercase tracking-wider mb-2">Application Type</label>
+<select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs transition-all text-slate-600 dark:text-slate-300" required>
+<option value="">Select Role Type</option>
+<option value="Full Time">Full-Time Position</option>
+<option value="Internship">Internship Program</option>
+</select>
+</div>
+<div>
+<label class="block text-[9px] md:text-[10px] font-bold uppercase tracking-wider mb-2">Upload Resume / PDF Document</label>
+<input type="file" accept=".pdf" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white/60 dark:bg-slate-800/60 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-xs file:mr-4 file:py-1.5 file:px-4 file:rounded-lg file:border-0 file:text-[9px] file:font-black file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 transition-all" required>
+</div>
+</div>
+<button type="submit" class="w-full py-3.5 rounded-xl text-white text-xs font-bold premium-gradient shadow-xl mt-2">Submit Application</button>
+</form>
+</section>
+</main>
+
+<footer class="glassmorphism border-t border-slate-200/60 dark:border-slate-700/60 py-8 md:py-12 px-6 mt-auto w-full">
+<div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 md:mb-12">
 <div class="space-y-3">
 <div class="flex flex-col mb-2">
 <span class="font-black text-xs md:text-sm tracking-wider uppercase text-gradient">SCALENOVA</span>
@@ -809,12 +835,12 @@ function switchPage(pageId) {
         if (p === pageId) {
             if (el) el.classList.remove('hidden');
             if (btn) {
-                btn.className = "nav-btn px-4 py-2 rounded-xl text-sm font-bold text-brand-600 bg-brand-50 dark:bg-slate-800 transition-all";
+                btn.className = "nav-btn px-4 py-2 rounded-xl text-xs font-bold text-brand-600 bg-brand-50 dark:bg-slate-800 transition-all";
             }
         } else {
             if (el) el.classList.add('hidden');
             if (btn) {
-                btn.className = "nav-btn px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all";
+                btn.className = "nav-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all";
             }
         }
     });
@@ -825,17 +851,17 @@ function toggleTheme() {
     if (document.documentElement.classList.contains('dark')) {
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
-        document.querySelector('#themeToggle i').className = "fas fa-moon text-slate-700 dark:text-slate-300 text-sm";
+        document.querySelector('#themeToggle i').className = "fas fa-moon text-slate-700 dark:text-slate-300 text-xs";
     } else {
         document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
-        document.querySelector('#themeToggle i').className = "fas fa-sun text-slate-300 text-sm";
+        document.querySelector('#themeToggle i').className = "fas fa-sun text-slate-300 text-xs";
     }
 }
 
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark');
-    document.querySelector('#themeToggle i').className = "fas fa-sun text-slate-300 text-sm";
+    document.querySelector('#themeToggle i').className = "fas fa-sun text-slate-300 text-xs";
 }
 
 function toggleMobileMenu() {
